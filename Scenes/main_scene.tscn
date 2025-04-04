@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="5_6ev3c"]
 [ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
-[ext_resource type="PackedScene" path="res://Scenes/tree.tscn" id="6_6ev3c"]
+[ext_resource type="PackedScene" uid="uid://ctwwlpwnj18s0" path="res://Scenes/tree.tscn" id="6_6ev3c"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="6_maf8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jv6wh"]
@@ -91,7 +91,7 @@ position = Vector2(26, -2)
 shape = SubResource("RectangleShape2D_x6ack")
 
 [node name="Player" parent="." instance=ExtResource("1_52fb6")]
-z_index = 1
+z_index = -1
 position = Vector2(14, 219)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
@@ -102,10 +102,10 @@ AreaPosition = Vector2(8, 218)
 
 [node name="Dialogue" parent="Camera2D" instance=ExtResource("6_maf8m")]
 z_index = 100
-offset_left = -157.0
-offset_top = -35.0
-offset_right = -117.0
-offset_bottom = 5.0
+offset_left = -161.0
+offset_top = -32.0
+offset_right = -121.0
+offset_bottom = 8.0
 
 [node name="CameraAreas" type="Node" parent="."]
 
