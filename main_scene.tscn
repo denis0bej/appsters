@@ -1,6 +1,0 @@
-[gd_scene load_steps=0 format=3 uid="uid://cr6stj3ela2rd"]
-
-[node name="MainScene" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(248, 183)
