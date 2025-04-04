@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://cid4lb0xk70ql"]
+[gd_scene load_steps=14 format=4 uid="uid://cid4lb0xk70ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="1_52fb6"]
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_jv6wh"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_x6ack"]
 [ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
+[ext_resource type="PackedScene" uid="uid://bnqtkm8il14tx" path="res://Scenes/tree.tscn" id="6_6ev3c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jv6wh"]
 texture = ExtResource("1_6l7je")
@@ -85,7 +86,7 @@ position = Vector2(26, -2)
 shape = SubResource("RectangleShape2D_x6ack")
 
 [node name="Player" parent="." instance=ExtResource("1_52fb6")]
-y_sort_enabled = true
+z_index = 1
 position = Vector2(14, 219)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
@@ -113,6 +114,10 @@ position = Vector2(0, -189)
 
 [node name="pos2" type="Node2D" parent="CameraAreas/TownMainRoad"]
 position = Vector2(0, 58)
+
+[node name="Tree" parent="." instance=ExtResource("6_6ev3c")]
+y_sort_enabled = true
+position = Vector2(105, 127)
 
 [connection signal="body_entered" from="CameraAreas/GateFront" to="Camera2D" method="_on_gate_front_body_entered"]
 [connection signal="body_entered" from="CameraAreas/TownMainRoad" to="Camera2D" method="_on_town_main_road_body_entered"]
