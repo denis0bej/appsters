@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="5_6ev3c"]
 [ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
-[ext_resource type="PackedScene" uid="uid://ctwwlpwnj18s0" path="res://Scenes/tree.tscn" id="6_6ev3c"]
-[ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="6_maf8m"]
+[ext_resource type="PackedScene" uid="uid://bq7uwre3tiud5" path="res://Scenes/tree.tscn" id="6_6ev3c"]
+[ext_resource type="PackedScene" path="res://Scenes/dialogue.tscn" id="6_maf8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jv6wh"]
 texture = ExtResource("1_6l7je")
@@ -137,7 +137,7 @@ position = Vector2(0, 58)
 
 [node name="Tree" parent="." instance=ExtResource("6_6ev3c")]
 y_sort_enabled = true
-position = Vector2(105, 127)
+position = Vector2(99, 127)
 
 [connection signal="body_entered" from="CameraAreas/GateFront" to="Camera2D" method="_on_gate_front_body_entered"]
 [connection signal="body_entered" from="CameraAreas/TownMainRoad" to="Camera2D" method="_on_town_main_road_body_entered"]
