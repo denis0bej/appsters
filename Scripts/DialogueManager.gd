@@ -23,6 +23,9 @@ func start_typing():
 		dialogue_label.text += current_text[i]
 		await get_tree().create_timer(typing_speed).timeout
 		i += 1
-
+	
+func process(delta):
+	print("ddssd")
+	
 func hide_dialogue():
 	dialogue_box.hide()

@@ -18,6 +18,7 @@ func _on_body_exited(body):
 
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("Interact"):
+		player_in_range = false
 		show_dialogue()
 
 func show_dialogue():
