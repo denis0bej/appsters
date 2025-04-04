@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://chpngd4xujipl"]
 
-[ext_resource type="Script" path="res://Scripts/old_man.gd" id="1_fpx3k"]
+[ext_resource type="Script" uid="uid://drfexstetpe43" path="res://Scripts/old_man.gd" id="1_fpx3k"]
 [ext_resource type="Texture2D" uid="uid://cvn1fkhh1iynd" path="res://Art/Old_man.png" id="1_vtomo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyoxv"]

@@ -21,4 +21,4 @@ func _process(delta):
 		show_dialogue()
 
 func show_dialogue():
-	get_node("/root/MainScene/Dialogue").show_dialogue("Salut, aventurierule!")
+	get_node("/root/MainScene/Camera2D/Dialogue").show_dialogue("Salut, aventurierule!")
