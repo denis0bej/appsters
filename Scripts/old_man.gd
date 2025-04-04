@@ -21,4 +21,4 @@ func _process(delta):
 		show_dialogue()
 
 func show_dialogue():
-	print(interaction_text)
+	get_node("/root/MainScene/Dialogue").show_dialogue("Salut, aventurierule!")

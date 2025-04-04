@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cycs08lnap2qv"]
+
+[ext_resource type="Texture2D" uid="uid://cboyknw4encla" path="res://Art/dialogue_block.png" id="1_5rqxr"]
+[ext_resource type="Script" uid="uid://4xtpis6mhe8p" path="res://Scripts/DialogueManager.gd" id="1_p21q5"]
+[ext_resource type="FontFile" uid="uid://rd8qo46nok5b" path="res://Art/ByteBounce.ttf" id="2_dgfud"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_p21q5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.729412)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 80.0
+offset_right = 500.0
+offset_bottom = 140.0
+scale = Vector2(0.94789, 0.92302)
+texture = ExtResource("1_5rqxr")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 10.5497
+offset_top = 9.75062
+offset_right = 148.55
+offset_bottom = 32.7506
+theme_override_fonts/font = ExtResource("2_dgfud")
+text = "Salutare, aventurierule!"
