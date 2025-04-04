@@ -7,7 +7,7 @@
 size = Vector2(20, 12.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0ret"]
-size = Vector2(7, 3.75)
+size = Vector2(7, 4.875)
 
 [node name="old_man" type="CharacterBody2D"]
 
@@ -23,5 +23,7 @@ position = Vector2(13, 2)
 texture = ExtResource("1_vtomo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, 7)
+position = Vector2(14, 7.5625)
 shape = SubResource("RectangleShape2D_k0ret")
+
+[connection signal="body_exited" from="Interact_area" to="Interact_area" method="_on_body_exited"]

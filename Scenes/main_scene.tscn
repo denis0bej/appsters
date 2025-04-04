@@ -63,6 +63,7 @@ size = Vector2(333, 401)
 y_sort_enabled = true
 
 [node name="old_man" parent="." instance=ExtResource("5_6ev3c")]
+y_sort_enabled = true
 position = Vector2(-5, 16)
 
 [node name="GroundLayer" type="TileMapLayer" parent="."]

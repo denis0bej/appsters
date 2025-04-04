@@ -2,6 +2,7 @@ extends Control
 
 @onready var dialogue_box = $TextureRect
 @onready var dialogue_label = $Label
+@onready var interact_area: Area2D = $Interact_area
 
 var current_text = ""
 var typing_speed = 0.05  # Viteză de scriere (secunde per literă)
@@ -9,6 +10,7 @@ var typing_speed = 0.05  # Viteză de scriere (secunde per literă)
 func _ready():
 	dialogue_box.hide()
 	dialogue_label.hide()
+	
 
 func show_dialogue(text):
 	dialogue_label.show()
@@ -24,8 +26,8 @@ func start_typing():
 		await get_tree().create_timer(typing_speed).timeout
 		i += 1
 	
-func process(delta):
-	print("ddssd")
-	
-func hide_dialogue():
+
+
+func _on_interact_area_body_exited(body: Node2D) -> void:
 	dialogue_box.hide()
+	dialogue_label.hide()
