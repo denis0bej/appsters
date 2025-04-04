@@ -1,15 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://chpngd4xujipl"]
+[gd_scene load_steps=5 format=3 uid="uid://cdhvg166qvgvo"]
 
+[ext_resource type="Script" uid="uid://drfexstetpe43" path="res://Scripts/old_man.gd" id="1_fpx3k"]
 [ext_resource type="Texture2D" uid="uid://cvn1fkhh1iynd" path="res://Art/Old_man.png" id="1_vtomo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fpx3k"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eyoxv"]
+size = Vector2(20, 12.5)
 
-[node name="Old_Man" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0ret"]
+size = Vector2(7, 3.75)
+
+[node name="old_man" type="CharacterBody2D"]
+
+[node name="Interact_area" type="Area2D" parent="."]
+script = ExtResource("1_fpx3k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area"]
+position = Vector2(14, 8)
+shape = SubResource("RectangleShape2D_eyoxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, 2)
 texture = ExtResource("1_vtomo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_fpx3k")
+position = Vector2(14, 7)
+shape = SubResource("RectangleShape2D_k0ret")
