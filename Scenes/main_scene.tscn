@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://cid4lb0xk70ql"]
+[gd_scene load_steps=17 format=4 uid="uid://cid4lb0xk70ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="1_52fb6"]
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_jv6wh"]
+[ext_resource type="PackedScene" uid="uid://cogx4hrvg17ps" path="res://Scenes/interact_button.tscn" id="2_m1efj"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="5_6ev3c"]
 [ext_resource type="Script" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
@@ -65,6 +66,12 @@ y_sort_enabled = true
 [node name="old_man" parent="." instance=ExtResource("5_6ev3c")]
 y_sort_enabled = true
 position = Vector2(-5, 16)
+
+[node name="interact_button" parent="old_man" instance=ExtResource("2_m1efj")]
+offset_left = 18.0
+offset_top = -12.0
+offset_right = 29.0
+offset_bottom = -1.0
 
 [node name="GroundLayer" type="TileMapLayer" parent="."]
 z_index = -1

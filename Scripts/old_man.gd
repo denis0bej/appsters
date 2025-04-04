@@ -2,6 +2,7 @@ extends Area2D
 @export var interaction_text: String = "Salut, ceafa lata"
 @onready var dialogue: Control = $Camera2D/Dialogue
 
+
 var player_in_range = false
 
 func _ready():
@@ -10,11 +11,13 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
+		get_node("/root/MainScene/old_man/interact_button").on()
 		player_in_range = true
 		print("Apasă 'E' pentru a vorbi.")
 
 func _on_body_exited(body):
 	if body.name == "Player":
+		get_node("/root/MainScene/old_man/interact_button")._ready()
 		player_in_range = false
 	
 
