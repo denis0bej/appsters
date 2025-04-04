@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnqtkm8il14tx"]
+
+[ext_resource type="Texture2D" path="res://Art/Tree.png" id="1_0vwjc"]
+
+[node name="Tree" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0vwjc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-25, 85, 75, 85, 75, 10, 7, 10, 2, 52, -20, 62, -9, 70)
