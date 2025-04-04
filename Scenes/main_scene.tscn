@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://cid4lb0xk70ql"]
+[gd_scene load_steps=13 format=4 uid="uid://cid4lb0xk70ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="1_52fb6"]
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_jv6wh"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_x6ack"]
+[ext_resource type="Script" uid="uid://dew2aybwhiarj" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jv6wh"]
 texture = ExtResource("1_6l7je")
@@ -49,6 +50,12 @@ sources/0 = SubResource("TileSetAtlasSource_x6ack")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ack"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ev3c"]
+size = Vector2(333, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iacmt"]
+size = Vector2(333, 401)
+
 [node name="MainScene" type="Node2D"]
 y_sort_enabled = true
 
@@ -58,11 +65,11 @@ tile_set = SubResource("TileSet_x6ack")
 
 [node name="WallLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAAAAkAAAACAAEAAAAAAAoAAAACAAMAAAAAAAcAAAACAAIAAAAAAAgAAAACAAIAAAADAAkAAAACAAMAAAADAAgAAAACAAIAAAADAAcAAAACAAEAAAADAAYAAAACAAIAAAAHAAYAAAACAAAAAAAHAAcAAAACAAEAAAAHAAgAAAACAAIAAAASAAkAAAACAAMAAAASAAgAAAACAAEAAAASAAcAAAACAAIAAAASAAYAAAADAAAAAAATAAcAAAAAAAIAAAATAAgAAAAAAAIAAAATAAkAAAAAAAMAAAAQAAkAAAAAAAMAAAAQAAgAAAAAAAIAAAAQAAcAAAAAAAIAAAAPAAYAAAABAAEAAAAOAAcAAAAAAAEAAAAOAAgAAAAAAAIAAAAPAAgAAAAAAAIAAAAPAAcAAAAAAAIAAAAPAAkAAAAAAAMAAAAOAAkAAAAAAAMAAAAGAAgAAAAAAAMAAAAGAAcAAAAAAAIAAAAGAAYAAAAAAAIAAAAFAAcAAAAAAAIAAAAFAAYAAAAAAAIAAAAFAAgAAAAAAAMAAAAEAAgAAAAAAAMAAAAEAAcAAAAAAAIAAAAEAAYAAAAAAAIAAAAEAAUAAAAAAAEAAAACAAcAAAAAAAIAAAACAAgAAAAAAAIAAAACAAkAAAAAAAMAAAABAAgAAAAAAAIAAAABAAkAAAAAAAIAAAABAAoAAAAAAAMAAAAAAAYAAAADAAAAAAABAAcAAAABAAEAAAACAAYAAAABAAEAAAAFAAUAAAABAAEAAAAGAAUAAAAAAAEAAAATAAYAAAAAAAEAAAARAAgAAAAAAAIAAAARAAkAAAAAAAMAAAARAAcAAAABAAEAAAAQAAYAAAAAAAEAAAADAAUAAAADAAAAAAAIAAcAAAABAAEAAAAIAAgAAAAAAAIAAAAIAAkAAAAAAAMAAAAHAAkAAAACAAMAAAA=")
+tile_map_data = PackedByteArray("AAD3/wUAAAAAAAEAAAD3/wYAAAAAAAIAAAD3/wcAAAAAAAIAAAD3/wgAAAAAAAMAAAD4/wQAAAADAAAAAAD4/wUAAAACAAIAAAD4/wYAAAACAAEAAAD4/wcAAAACAAIAAAD4/wgAAAACAAMAAAD5/wQAAAAAAAEAAAD5/wUAAAAAAAIAAAD5/wYAAAAAAAIAAAD5/wcAAAAAAAMAAAD6/wQAAAABAAEAAAD6/wUAAAAAAAIAAAD6/wYAAAAAAAIAAAD6/wcAAAAAAAMAAAD7/wQAAAAAAAEAAAD7/wUAAAAAAAIAAAD7/wYAAAAAAAIAAAD7/wcAAAAAAAMAAAD8/wUAAAACAAAAAAD8/wYAAAACAAEAAAD8/wcAAAACAAIAAAD8/wgAAAACAAMAAAD9/wYAAAABAAEAAAD9/wcAAAAAAAIAAAD9/wgAAAAAAAMAAAADAAYAAAAAAAEAAAADAAcAAAAAAAIAAAADAAgAAAAAAAMAAAAEAAUAAAABAAEAAAAEAAYAAAAAAAIAAAAEAAcAAAAAAAIAAAAEAAgAAAAAAAMAAAAFAAUAAAAAAAEAAAAFAAYAAAAAAAIAAAAFAAcAAAAAAAIAAAAFAAgAAAAAAAMAAAAGAAYAAAABAAEAAAAGAAcAAAAAAAIAAAAGAAgAAAAAAAMAAAAHAAUAAAADAAAAAAAHAAYAAAACAAIAAAAHAAcAAAACAAEAAAAHAAgAAAACAAMAAAAIAAUAAAAAAAEAAAAIAAYAAAAAAAIAAAAIAAcAAAAAAAIAAAAIAAgAAAAAAAMAAAAJAAUAAAADAAAAAAAJAAYAAAACAAIAAAAJAAcAAAACAAIAAAAJAAgAAAACAAEAAAAJAAkAAAACAAMAAAAKAAYAAAABAAEAAAAKAAcAAAAAAAIAAAAKAAgAAAAAAAIAAAAKAAkAAAAAAAMAAAD2/wgAAAAAAAMAAAD2/wUAAAABAAEAAAD2/wYAAAAAAAIAAAD2/wcAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_iacmt")
 
 [node name="ExteriorGate" type="Sprite2D" parent="."]
-position = Vector2(184, 154)
+position = Vector2(8, 138)
 texture = ExtResource("4_x6ack")
 offset = Vector2(0, -33.965)
 
@@ -78,4 +85,38 @@ shape = SubResource("RectangleShape2D_x6ack")
 
 [node name="Player" parent="." instance=ExtResource("1_52fb6")]
 y_sort_enabled = true
-position = Vector2(144, 79)
+position = Vector2(14, 219)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
+position = Vector2(6, 140)
+script = ExtResource("5_iacmt")
+target = NodePath("../Player")
+
+[node name="CameraAreas" type="Node" parent="."]
+
+[node name="GateFront" type="Area2D" parent="CameraAreas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraAreas/GateFront"]
+position = Vector2(8, 218)
+shape = SubResource("RectangleShape2D_6ev3c")
+
+[node name="pos1" type="Node2D" parent="CameraAreas/GateFront"]
+position = Vector2(8, 218)
+
+[node name="pos2" type="Node2D" parent="CameraAreas/GateFront"]
+position = Vector2(8, 218)
+
+[node name="TownMainRoad" type="Area2D" parent="CameraAreas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraAreas/TownMainRoad"]
+position = Vector2(8.5, -66.5)
+shape = SubResource("RectangleShape2D_iacmt")
+
+[node name="pos1" type="Node2D" parent="CameraAreas/TownMainRoad"]
+position = Vector2(0, -189)
+
+[node name="pos2" type="Node2D" parent="CameraAreas/TownMainRoad"]
+position = Vector2(0, 58)
+
+[connection signal="body_entered" from="CameraAreas/GateFront" to="Camera2D" method="_on_gate_front_body_entered"]
+[connection signal="body_entered" from="CameraAreas/TownMainRoad" to="Camera2D" method="_on_town_main_road_body_entered"]
