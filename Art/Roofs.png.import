@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd5gshn0vj431"
-path="res://.godot/imported/Tree-sheet.png-0f76792dc6365c8aa026dafe51a03168.ctex"
+uid="uid://cn7wfmytrihgv"
+path="res://.godot/imported/Roofs.png-b96657487b6115e47daca81bc44c2b43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Tree-sheet.png"
-dest_files=["res://.godot/imported/Tree-sheet.png-0f76792dc6365c8aa026dafe51a03168.ctex"]
+source_file="res://Art/Roofs.png"
+dest_files=["res://.godot/imported/Roofs.png-b96657487b6115e47daca81bc44c2b43.ctex"]
 
 [params]
 
