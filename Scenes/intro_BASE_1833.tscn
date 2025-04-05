@@ -1,8 +1,8 @@
-[gd_scene load_steps=34 format=4 uid="uid://b0idjvukbm1b0"]
+[gd_scene load_steps=34 format=4 uid="uid://dkjmdo5g20e6a"]
 
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="1_hwjxs"]
-[ext_resource type="PackedScene" uid="uid://ch6rle2n2132" path="res://Scenes/doggy.tscn" id="1_pgam6"]
-[ext_resource type="Script" path="res://Scripts/animation_player.gd" id="2_g8dlr"]
+[ext_resource type="PackedScene" uid="uid://ck5ta15o0at08" path="res://Scenes/doggy.tscn" id="1_pgam6"]
+[ext_resource type="Script" uid="uid://fdt1aynmrvge" path="res://Scripts/animation_player.gd" id="2_g8dlr"]
 [ext_resource type="Texture2D" uid="uid://if6vf55i7a1h" path="res://Art/Buildings_Colour2.png" id="2_hwjxs"]
 [ext_resource type="Texture2D" uid="uid://cboyknw4encla" path="res://Art/dialogue_block.png" id="2_nn7w8"]
 [ext_resource type="Script" uid="uid://crgyfqbhoephf" path="res://Scripts/intro_dialogue.gd" id="3_b26wi"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://br3essawgrw82" path="res://Art/quest_icon.png" id="5_b26wi"]
 [ext_resource type="Script" uid="uid://baae48crk2jna" path="res://Scripts/quest_icon.gd" id="6_ewknp"]
 [ext_resource type="Texture2D" uid="uid://dtgybfxausvtj" path="res://Art/quest_displayer.png" id="7_a7jvs"]
-[ext_resource type="Script" path="res://Scripts/explosion_animation.gd" id="10_33jql"]
+[ext_resource type="Script" uid="uid://bdvnlvxa01s6k" path="res://Scripts/explosion_animation.gd" id="10_33jql"]
 [ext_resource type="Texture2D" uid="uid://b33ytnl7j3iin" path="res://Art/trees.png" id="11_itfcf"]
 
 [sub_resource type="Animation" id="Animation_g8dlr"]
