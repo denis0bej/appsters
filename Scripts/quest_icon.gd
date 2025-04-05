@@ -4,6 +4,7 @@ extends TextureRect
 @onready var quest_display: TextureRect = $Quest_display
 @onready var quest_text: Label = $Quest_display/Quest_text
 var typing_speed = 0.05
+var quest_is_show = true
  #Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	quest_display.hide()
@@ -12,9 +13,15 @@ func _ready() -> void:
  #Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("lmb") && is_mouse_over_object(collision_shape):
-		quest_display.show()
-		quest_text.show()
-		start_typing("Get the dog outside.\nHint: yellow door")
+		if (quest_is_show) :
+			quest_is_show = false
+			quest_display.show()
+			quest_text.show()
+			start_typing("Get the dog outside.\nHint: yellow door")
+		else:
+			quest_is_show = true
+			quest_display.hide()
+			quest_text.hide()
 		
 func start_typing(current_text):
 	quest_text.text = ""
