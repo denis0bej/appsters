@@ -102,10 +102,9 @@ shape = SubResource("RectangleShape2D_nwfgd")
 z_index = -1
 position = Vector2(14, 219)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(6, 140)
 script = ExtResource("7_36r41")
-target = NodePath("")
 AreaPosition = Vector2(8, 218)
 
 [node name="Dialogue" parent="Camera2D" instance=ExtResource("8_kq6pr")]
