@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="1_52fb6"]
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_jv6wh"]
-[ext_resource type="PackedScene" uid="uid://cogx4hrvg17ps" path="res://Scenes/interact_button.tscn" id="2_m1efj"]
+[ext_resource type="PackedScene" path="res://Scenes/interact_button.tscn" id="2_m1efj"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="5_6ev3c"]
 [ext_resource type="Script" uid="uid://dew2aybwhiarj" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
-[ext_resource type="PackedScene" path="res://Scenes/tree.tscn" id="6_6ev3c"]
+[ext_resource type="PackedScene" uid="uid://b3ew31x6smx3j" path="res://Scenes/tree.tscn" id="6_6ev3c"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="6_maf8m"]
 [ext_resource type="PackedScene" uid="uid://bbrknyd7cbleb" path="res://Scenes/Inventory.tscn" id="9_mai8y"]
 
@@ -68,7 +68,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 position = Vector2(-5, 16)
 
-[node name="interact_button" parent="old_man" instance=ExtResource("2_m1efj")]
+[node name="interact_button2" parent="old_man" instance=ExtResource("2_m1efj")]
 offset_left = 18.0
 offset_top = -12.0
 offset_right = 29.0
@@ -116,10 +116,18 @@ offset_right = -121.0
 offset_bottom = 8.0
 
 [node name="Control" parent="Camera2D" instance=ExtResource("9_mai8y")]
+z_index = 4
 offset_left = -31.0
 offset_top = 67.0
 offset_right = -31.0
 offset_bottom = 67.0
+
+[node name="Dialogue_old_man" parent="Camera2D" instance=ExtResource("6_maf8m")]
+z_index = 100
+offset_left = -161.0
+offset_top = -32.0
+offset_right = -121.0
+offset_bottom = 8.0
 
 [node name="CameraAreas" type="Node" parent="."]
 

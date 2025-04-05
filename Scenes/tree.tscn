@@ -59,7 +59,7 @@ animations = [{
 size = Vector2(133, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3oha"]
-size = Vector2(3, 14)
+size = Vector2(3, 11.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m36md"]
 radius = 5.0
@@ -93,7 +93,7 @@ position = Vector2(39, 82.5)
 texture = ExtResource("3_l7sa7")
 
 [node name="Small_tree_collision" type="CollisionShape2D" parent="."]
-position = Vector2(39.5, 88.5)
+position = Vector2(39.5, 87.25)
 shape = SubResource("RectangleShape2D_l3oha")
 
 [node name="Apple1" type="Sprite2D" parent="."]

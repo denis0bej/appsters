@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=26 format=3 uid="uid://ck5ta15o0at08"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://ch6rle2n2132"]
+>>>>>>> Mosu
 
 [ext_resource type="Texture2D" uid="uid://c5xw40nklu7qy" path="res://Art/dog_walk_east.png" id="1_idku3"]
 [ext_resource type="Texture2D" uid="uid://c0oqvvd4k2kkw" path="res://Art/Doggy.png" id="1_s3c8e"]
