@@ -8,7 +8,8 @@ var artefact: bool
 var can_use_art: bool #when in range of using
 var in_range: bool
 var art_cooldown: bool #false = no cooldown
-var tree_anim: bool
+var real_apples: bool
+var apple_to_grab: Sprite2D
 
 @export var tree: CharacterBody2D
 
@@ -17,7 +18,7 @@ func _ready() -> void:
 	can_use_art = true
 	in_range = false
 	art_cooldown = false
-	tree_anim = false
+	real_apples = false
 	tree = get_parent().get_node("Tree")
 
 func _physics_process(delta: float) -> void:
@@ -43,16 +44,16 @@ func _physics_process(delta: float) -> void:
 	
 	if artefact == true: #player has artefact in hand
 		if can_use_art == true: #didn't already use or is in range of using
-			print("Press lmb to use")
+			#print("Press lmb to use")
 			if Input.is_action_just_pressed("lmb"):
 				print("used")
 				art_cooldown = true
-				$Timer.start(3)
-				print("sdfsdf")
+				$Timer.start(0.7)
 				tree.get_node("Tree_bw_anim").play("tree_bw")
-				tree_anim = true
-				if tree_anim == false:
-					tree.stop()
+	
+	if Input.is_action_just_pressed("Interact"):
+		print("TEST")
+		apple_to_grab.visible = false
 
 func play_walk_animation(dir: Vector2) -> void:
 	if abs(dir.x) >= abs(dir.y):
@@ -72,8 +73,24 @@ func artefact_use():
 func artefact_dont_use():
 	in_range = false
 
-func tree_bw_animation():
-	tree_anim = false
-
 func _on_timer_timeout() -> void:
-	art_cooldown = false
+	if real_apples == false:
+		tree.get_node("CollisionPolygon2D").disabled = true
+		tree.get_node("Small_tree").visible = true
+		tree.get_node("Apple2").visible = true
+		tree.get_node("Apple3").visible = true
+		tree.get_node("Apple4").visible = true
+		tree.get_node("Apple5").visible = true
+		tree.get_node("Apple6").visible = true
+		tree.get_node("Apple7").visible = true
+		tree.get_node("Apple8").visible = true
+		tree.get_node("Apple9").visible = true
+		tree.get_node("Apple10").visible = true
+		tree.get_node("Apple11").visible = true
+		tree.get_node("Apple12").visible = true
+		tree.get_node("Tree_bw_anim").visible = false
+		art_cooldown = false
+		real_apples = true
+
+func apple_grab(apple: Sprite2D):
+	apple_to_grab = apple
