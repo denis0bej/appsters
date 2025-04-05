@@ -8,6 +8,7 @@ extends AnimationPlayer
 @onready var animation_doggy: AnimationPlayer = $"../../../doggy/AnimationPlayer"
 @onready var falling_artefact: AudioStreamPlayer = $"../../../falling_artefact"
 @onready var player: CharacterBody2D = $"../.."
+@onready var skip_text: Label = $"../SkipText"
 
 var typing_speed = 0.05
 var isTriggered = true
@@ -35,9 +36,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	dialogue.show()
 	dialogue_text.show()
+	skip_text.show()
+	skip_text.text = "Press [E] to skip"
 	await start_typing("Wh...Wh..What happend?")
-	wait_for_input("Interact")
+	await wait_for_input("Interact")
 	player.speed = 70
+	skip_text.hide()
 	dialogue.hide()
 	dialogue_text.hide()
 	animation_doggy.play("run")
