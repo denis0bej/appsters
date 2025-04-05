@@ -2,16 +2,18 @@ extends TextureRect
 @onready var label: Label = $"../Dialogue_text"
 @onready var texture_rect: TextureRect = $"."
 var current_text = ""
+@onready var player: CharacterBody2D = $"../.."
 var typing_speed = 0.05
 
 func _ready() -> void:
+	player.speed = 0
 	texture_rect.show()
 	await start_typing("What a beautiful and sunny sunday is today!")
 	await wait_for_input("Interact")
 	await start_typing("I should get my dog for a walk!")
 	label.text = ""
 	texture_rect.hide()
-	
+	player.speed = 70
 
 func start_typing(current_text):
 	label.text = ""
