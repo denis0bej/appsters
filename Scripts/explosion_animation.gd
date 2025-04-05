@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if (isTriggered):
+	if (isTriggered) && body.name.contains("Player"):
 		isTriggered = false
 		explosion_animation.play("explosion")
 		timer.start(1.5)

@@ -4,15 +4,19 @@ extends TextureRect
 var current_text = ""
 @onready var player: CharacterBody2D = $"../.."
 var typing_speed = 0.05
+@onready var skip_text: Label = $"../SkipText"
 
 func _ready() -> void:
 	player.speed = 0
 	texture_rect.show()
+	skip_text.text = "Press [E] to skip"
 	await start_typing("What a beautiful and sunny sunday is today!")
 	await wait_for_input("Interact")
 	await start_typing("I should get my dog for a walk!")
+	await wait_for_input("Interact")
 	label.text = ""
 	texture_rect.hide()
+	skip_text.text = ""
 	player.speed = 70
 
 func start_typing(current_text):
