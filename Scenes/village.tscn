@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cevvsjycti0q5"]
+[gd_scene load_steps=33 format=4 uid="uid://d0lakgrv581lx"]
 
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="1_hsw83"]
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_ofn1o"]
@@ -6,13 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_tmqdu"]
 [ext_resource type="Texture2D" uid="uid://if6vf55i7a1h" path="res://Art/Buildings_Colour2.png" id="3_lwl7v"]
 [ext_resource type="Texture2D" uid="uid://bbi8h6akggu6a" path="res://Art/Walls.png" id="3_tmqdu"]
-[ext_resource type="Texture2D" uid="uid://dorfjgp00tq1n" path="res://Art/castle_walls.png" id="4_cibu2"]
+[ext_resource type="Texture2D" uid="uid://dvrrgljysnh58" path="res://Art/castle_walls.png" id="4_cibu2"]
 [ext_resource type="Texture2D" uid="uid://cn7wfmytrihgv" path="res://Art/Roofs.png" id="4_hsw83"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_vn26p"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="5_4ev5p"]
 [ext_resource type="Script" uid="uid://dew2aybwhiarj" path="res://Scenes/camera_2d.gd" id="6_yf0b0"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="7_hsw83"]
-[ext_resource type="Texture2D" uid="uid://b112mda7f3kb6" path="res://Art/castle-entrance.png" id="8_8uog6"]
+[ext_resource type="Texture2D" uid="uid://dd6rit8vgvoiw" path="res://Art/castle-entrance.png" id="8_8uog6"]
 [ext_resource type="PackedScene" uid="uid://b3ew31x6smx3j" path="res://Scenes/tree.tscn" id="8_yf0b0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om0bm"]
