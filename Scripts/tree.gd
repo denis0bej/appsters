@@ -68,9 +68,10 @@ func interact(apple: Sprite2D) -> void:
 	apple_pickup = false
 	
 	var texture:= apple.texture
-	control.get_node("Slot1/Item1").texture = texture
+	control.get_node("Slot4/Item4").texture = texture
 	
-	control.item2_counter()
+	control.item_slot(4)
+	control.item_counter()
 
 func _on_apple_area_1_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):

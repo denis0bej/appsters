@@ -40,7 +40,6 @@ offset_right = 42.5
 offset_bottom = 33.5
 scale = Vector2(2.5, 2.5)
 theme_override_fonts/font = ExtResource("3_4v8qb")
-text = "0	"
 
 [node name="Slot2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -51,8 +50,20 @@ texture = ExtResource("1_ersrd")
 
 [node name="Item2" type="TextureRect" parent="Slot2"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 33.0
+offset_bottom = 32.0
+
+[node name="Label2" type="Label" parent="Slot2"]
+z_index = 1
+layout_mode = 0
+offset_left = 27.5
+offset_top = 22.5
+offset_right = 42.5
+offset_bottom = 33.5
+scale = Vector2(2.5, 2.5)
+theme_override_fonts/font = ExtResource("3_4v8qb")
 
 [node name="Slot3" type="TextureRect" parent="."]
 layout_mode = 0
@@ -63,8 +74,20 @@ texture = ExtResource("1_ersrd")
 
 [node name="Item3" type="TextureRect" parent="Slot3"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Label3" type="Label" parent="Slot3"]
+z_index = 1
+layout_mode = 0
+offset_left = 27.5
+offset_top = 22.5
+offset_right = 42.5
+offset_bottom = 33.5
+scale = Vector2(2.5, 2.5)
+theme_override_fonts/font = ExtResource("3_4v8qb")
 
 [node name="Slot4" type="TextureRect" parent="."]
 layout_mode = 0
@@ -75,5 +98,17 @@ texture = ExtResource("1_ersrd")
 
 [node name="Item4" type="TextureRect" parent="Slot4"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 33.0
+offset_bottom = 32.0
+
+[node name="Label4" type="Label" parent="Slot4"]
+z_index = 1
+layout_mode = 0
+offset_left = 27.5
+offset_top = 22.5
+offset_right = 42.5
+offset_bottom = 33.5
+scale = Vector2(2.5, 2.5)
+theme_override_fonts/font = ExtResource("3_4v8qb")
