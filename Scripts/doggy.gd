@@ -13,7 +13,6 @@ func _process(delta):
 func update_animation():
 	var direction = position - previous_position
 	var sprite = $AnimatedSprite2D
-	print(direction.length())
 	if direction.length() < 0.1:
 		if not sprite.is_playing() or sprite.animation != "idle":
 			sprite.play("idle")

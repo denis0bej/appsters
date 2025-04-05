@@ -1,5 +1,8 @@
 extends Control
+@onready var settings_menu: Control = $"."
 
+
+var is_main = 1
 func _ready():
 	$VolumeSlider.value_changed.connect(_on_volume_changed)
 	$FullscreenCheckBox.toggled.connect(_on_fullscreen_toggled)
@@ -14,4 +17,9 @@ func _on_fullscreen_toggled(checked: bool):
 	print("Fullscreen: ", checked)
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	if (is_main):
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	else:
+		settings_menu.hide()
+		get_parent()._on_resume()
+		
