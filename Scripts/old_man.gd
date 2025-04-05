@@ -11,13 +11,13 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		get_node("/root/MainScene/old_man/interact_button").on()
+		get_node("/root/Village/old_man/interact_button").on()
 		player_in_range = true
 		print("Apasă 'E' pentru a vorbi.")
 
 func _on_body_exited(body):
 	if body.name == "Player":
-		get_node("/root/MainScene/old_man/interact_button")._ready()
+		get_node("/root/Village/old_man/interact_button")._ready()
 		player_in_range = false
 	
 
@@ -28,5 +28,5 @@ func _process(delta):
 
 
 func show_dialogue():
-	get_node("/root/MainScene/Camera2D/Dialogue").show_dialogue("Hello, young adventurer, how can I help you?")
+	get_node("/root/Village/Camera2D/Dialogue").show_dialogue("Hello, young adventurer, how can I help you?")
 	

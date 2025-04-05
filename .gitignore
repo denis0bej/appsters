@@ -13,5 +13,6 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+*.import
 Art/Tree-sheet.png.import
 Art/Tree.png.import
