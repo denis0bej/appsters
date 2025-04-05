@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://d0lakgrv581lx"]
+[gd_scene load_steps=39 format=4 uid="uid://d0lakgrv581lx"]
 
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="1_hsw83"]
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_ofn1o"]
@@ -14,7 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="7_hsw83"]
 [ext_resource type="Texture2D" uid="uid://dd6rit8vgvoiw" path="res://Art/castle-entrance.png" id="8_8uog6"]
 [ext_resource type="PackedScene" uid="uid://b3ew31x6smx3j" path="res://Scenes/tree.tscn" id="8_yf0b0"]
-[ext_resource type="PackedScene" uid="uid://b68cerr67vmdd" path="res://Scenes/Inventory.tscn" id="13_36r41"]
+[ext_resource type="PackedScene" uid="uid://bbrknyd7cbleb" path="res://Scenes/Inventory.tscn" id="13_36r41"]
+[ext_resource type="PackedScene" uid="uid://d23wr4pjlrh68" path="res://Scenes/girl.tscn" id="15_5f43a"]
 [ext_resource type="PackedScene" path="res://Scenes/interact_button.tscn" id="16_kq6pr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om0bm"]
@@ -2367,6 +2368,43 @@ size = Vector2(20, 152)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kq6pr"]
 size = Vector2(321, 20)
 
+[sub_resource type="Animation" id="Animation_5f43a"]
+resource_name = "greetings"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.766667, 5.03333, 6.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(49, 157), Vector2(100, 158), Vector2(100, 158), Vector2(42, 181)]
+}
+
+[sub_resource type="Animation" id="Animation_0i4px"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(49, 157)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oveex"]
+_data = {
+&"RESET": SubResource("Animation_0i4px"),
+&"greetings": SubResource("Animation_5f43a")
+}
+
 [node name="Village" type="Node2D"]
 y_sort_enabled = true
 
@@ -2455,13 +2493,6 @@ position = Vector2(6, 140)
 script = ExtResource("6_yf0b0")
 target = NodePath("../Player")
 
-[node name="Dialogue" parent="Camera2D" instance=ExtResource("7_hsw83")]
-z_index = 100
-offset_left = -161.0
-offset_top = -32.0
-offset_right = -121.0
-offset_bottom = 8.0
-
 [node name="Control" parent="Camera2D" instance=ExtResource("13_36r41")]
 z_index = 4
 offset_left = -31.0
@@ -2469,7 +2500,7 @@ offset_top = 67.0
 offset_right = -31.0
 offset_bottom = 67.0
 
-[node name="Dialogue_old_man" parent="Camera2D" instance=ExtResource("7_hsw83")]
+[node name="Dialogue" parent="Camera2D" instance=ExtResource("7_hsw83")]
 z_index = 100
 offset_left = -161.0
 offset_top = -32.0
@@ -2480,6 +2511,21 @@ offset_bottom = 8.0
 z_index = 11
 y_sort_enabled = true
 position = Vector2(99, 127)
+
+[node name="Girl" parent="." instance=ExtResource("15_5f43a")]
+position = Vector2(49, 157)
+
+[node name="interact_button2" parent="Girl" instance=ExtResource("16_kq6pr")]
+z_index = 1
+offset_left = 8.0
+offset_top = -10.0
+offset_right = 19.0
+offset_bottom = 1.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Girl"]
+libraries = {
+&"": SubResource("AnimationLibrary_oveex")
+}
 
 [node name="old_man" parent="." instance=ExtResource("1_hsw83")]
 position = Vector2(107, -233)

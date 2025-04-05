@@ -26,4 +26,5 @@ texture = ExtResource("1_vtomo")
 position = Vector2(14, 7.5625)
 shape = SubResource("RectangleShape2D_k0ret")
 
+[connection signal="body_entered" from="Interact_area" to="Interact_area" method="_on_body_entered"]
 [connection signal="body_exited" from="Interact_area" to="Interact_area" method="_on_body_exited"]

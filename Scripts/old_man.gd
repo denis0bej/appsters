@@ -1,14 +1,9 @@
 extends Area2D
-@export var interaction_text: String = "Salut, ceafa lata"
-@onready var dialogue: Control = $Camera2D/Dialogue
 
 var player_in_range = false
 
 func _ready():
-	print("Interact Button:", get_node_or_null("interact_button2"))
-
-	connect("body_entered", _on_body_entered)
-	connect("body_exited", _on_body_exited)
+	pass
 
 func _on_body_entered(body):
 	if body.name == "Player":
@@ -22,12 +17,12 @@ func _on_body_exited(body):
 		player_in_range = false
 	
 
-func _process(delta):
+func _physics_process(delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("Interact"):
 		player_in_range = false
 		show_dialogue()
 
 
 func show_dialogue():
-	$"../../Camera2D/Dialogue_old_man".show_dialogue("Hello, young adventurer, how can I help you?")
+	$"../../Camera2D/Dialogue".show_dialogue("Sup homie, i got a cool rock, trade you\nfor that pookie u got there?")
 	

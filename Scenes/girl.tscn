@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://d23wr4pjlrh68"]
+
+[ext_resource type="Script" uid="uid://blteyimwcds4x" path="res://Scripts/girl.gd" id="1_2aqrg"]
+[ext_resource type="Texture2D" uid="uid://bcdb324ivv6jk" path="res://Art/Girl.png" id="1_q06i7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8pqh"]
+atlas = ExtResource("1_q06i7")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aqrg"]
+atlas = ExtResource("1_q06i7")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61nlv"]
+atlas = ExtResource("1_q06i7")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12y5m"]
+atlas = ExtResource("1_q06i7")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l5kch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8pqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aqrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61nlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12y5m")
+}],
+"loop": true,
+"name": &"walk_south",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f5avm"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12y5m"]
+size = Vector2(20, 12.5)
+
+[node name="Girl" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l5kch")
+animation = &"walk_south"
+frame = 2
+frame_progress = 0.191891
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_f5avm")
+
+[node name="Interact_area" type="Area2D" parent="."]
+script = ExtResource("1_2aqrg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_12y5m")
+
+[connection signal="body_entered" from="Interact_area" to="Interact_area" method="_on_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="Interact_area" method="_on_body_exited"]
