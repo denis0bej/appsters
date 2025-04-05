@@ -1,12 +1,12 @@
-[gd_scene load_steps=22 format=4 uid="uid://cfueqn6d302fy"]
+[gd_scene load_steps=22 format=4 uid="uid://c6rnvrotelhlk"]
 
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="1_clpxm"]
-[ext_resource type="Texture2D" uid="uid://c22enmhkcnxp8" path="res://Art/castleFloors.png" id="1_nnqyf"]
+[ext_resource type="Texture2D" uid="uid://w2uh5iwvv4rx" path="res://Art/castleFloors.png" id="1_nnqyf"]
 [ext_resource type="Texture2D" uid="uid://bbi8h6akggu6a" path="res://Art/Walls.png" id="2_nnqyf"]
 [ext_resource type="Texture2D" uid="uid://cn7wfmytrihgv" path="res://Art/Roofs.png" id="3_qn2cr"]
-[ext_resource type="Texture2D" uid="uid://dorfjgp00tq1n" path="res://Art/castle_walls.png" id="4_i7gev"]
+[ext_resource type="Texture2D" uid="uid://cs7d6x3rgph6" path="res://Art/castle_walls.png" id="4_i7gev"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="5_xtbb3"]
-[ext_resource type="Texture2D" uid="uid://dl2jid1141lsi" path="res://Art/pillar.png" id="6_nnqyf"]
+[ext_resource type="Texture2D" uid="uid://ngc0pocf8o4k" path="res://Art/pillar.png" id="6_nnqyf"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="7_mh01j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qn2cr"]
