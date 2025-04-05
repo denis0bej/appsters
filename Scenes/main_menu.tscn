@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://6nhem87f1n5l"]
+[gd_scene load_steps=6 format=4 uid="uid://c2nya4fiqe0k7"]
 
 [ext_resource type="FontFile" uid="uid://rd8qo46nok5b" path="res://Art/ByteBounce.ttf" id="1_28flt"]
 [ext_resource type="Script" uid="uid://dpxykjl7yo8b6" path="res://Scripts/main_menu.gd" id="1_48xlc"]
