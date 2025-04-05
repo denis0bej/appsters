@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3ew31x6smx3j"]
+[gd_scene load_steps=15 format=3 uid="uid://b3ew31x6smx3j"]
 
 [ext_resource type="Script" uid="uid://8dmprpdbdvya" path="res://Scenes/tree.gd" id="1_rsuno"]
-[ext_resource type="Texture2D" uid="uid://bvmo7to06te0s" path="res://Art/Tree-sheet.png" id="2_l7sa7"]
+[ext_resource type="Texture2D" uid="uid://bd5gshn0vj431" path="res://Art/Tree-sheet.png" id="2_l7sa7"]
+[ext_resource type="Texture2D" uid="uid://c2cvdjqv4sx8o" path="res://Art/Small_tree.png" id="3_l7sa7"]
+[ext_resource type="Texture2D" uid="uid://bvi37qxpkekts" path="res://Art/Apple.png" id="4_l3oha"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsuno"]
 atlas = ExtResource("2_l7sa7")
@@ -48,13 +50,19 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jqx0n")
 }],
-"loop": true,
+"loop": false,
 "name": &"tree_bw",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vwjc"]
 size = Vector2(133, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3oha"]
+size = Vector2(3, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m36md"]
+radius = 5.0
 
 [node name="Tree" type="CharacterBody2D"]
 script = ExtResource("1_rsuno")
@@ -66,6 +74,7 @@ animation = &"tree_bw"
 offset = Vector2(0, -74.805)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(-34, 84, 75, 85, 75, 10, 8, 10, 4, 52, -20, 62, -9, 70)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -75,6 +84,130 @@ visible = false
 position = Vector2(7.5, 55)
 shape = SubResource("RectangleShape2D_0vwjc")
 
-[connection signal="animation_looped" from="Tree_bw_anim" to="." method="_on_tree_bw_anim_animation_looped"]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Small_tree" type="Sprite2D" parent="."]
+position = Vector2(39, 82.5)
+texture = ExtResource("3_l7sa7")
+
+[node name="Small_tree_collision" type="CollisionShape2D" parent="."]
+position = Vector2(39.5, 88.5)
+shape = SubResource("RectangleShape2D_l3oha")
+
+[node name="Apple1" type="Sprite2D" parent="."]
+position = Vector2(-45.5, 78.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area1" type="Area2D" parent="Apple1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple1/Apple_Area1"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple2" type="Sprite2D" parent="."]
+position = Vector2(-33.5, 90.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area2" type="Area2D" parent="Apple2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple2/Apple_Area2"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple3" type="Sprite2D" parent="."]
+position = Vector2(-23.5, 75.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area3" type="Area2D" parent="Apple3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple3/Apple_Area3"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple4" type="Sprite2D" parent="."]
+position = Vector2(-12.5, 94.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area4" type="Area2D" parent="Apple4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple4/Apple_Area4"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple5" type="Sprite2D" parent="."]
+position = Vector2(-4.5, 82.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area5" type="Area2D" parent="Apple5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple5/Apple_Area5"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple6" type="Sprite2D" parent="."]
+position = Vector2(8.5, 74.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area6" type="Area2D" parent="Apple6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple6/Apple_Area6"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple7" type="Sprite2D" parent="."]
+position = Vector2(12.5, 87.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area7" type="Area2D" parent="Apple7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple7/Apple_Area7"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple8" type="Sprite2D" parent="."]
+position = Vector2(26.5, 91.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area8" type="Area2D" parent="Apple8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple8/Apple_Area8"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple9" type="Sprite2D" parent="."]
+position = Vector2(28.5, 79.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area9" type="Area2D" parent="Apple9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple9/Apple_Area9"]
+position = Vector2(0.5, -1.5)
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple10" type="Sprite2D" parent="."]
+position = Vector2(47.5, 90.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area10" type="Area2D" parent="Apple10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple10/Apple_Area10"]
+shape = SubResource("CircleShape2D_m36md")
+
+[node name="Apple11" type="Sprite2D" parent="."]
+position = Vector2(61.5, 84.5)
+texture = ExtResource("4_l3oha")
+
+[node name="Apple_Area11" type="Area2D" parent="Apple11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple11/Apple_Area11"]
+shape = SubResource("CircleShape2D_m36md")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Apple1/Apple_Area1" to="." method="_on_apple_area_1_body_entered"]
+[connection signal="body_entered" from="Apple2/Apple_Area2" to="." method="_on_apple_area_2_body_entered"]
+[connection signal="body_entered" from="Apple3/Apple_Area3" to="." method="_on_apple_area_3_body_entered"]
+[connection signal="body_entered" from="Apple4/Apple_Area4" to="." method="_on_apple_area_4_body_entered"]
+[connection signal="body_entered" from="Apple5/Apple_Area5" to="." method="_on_apple_area_5_body_entered"]
+[connection signal="body_entered" from="Apple6/Apple_Area6" to="." method="_on_apple_area_6_body_entered"]
+[connection signal="body_entered" from="Apple7/Apple_Area7" to="." method="_on_apple_area_7_body_entered"]
+[connection signal="body_entered" from="Apple8/Apple_Area8" to="." method="_on_apple_area_8_body_entered"]
+[connection signal="body_entered" from="Apple9/Apple_Area9" to="." method="_on_apple_area_9_body_entered"]
+[connection signal="body_entered" from="Apple10/Apple_Area10" to="." method="_on_apple_area_10_body_entered"]
+[connection signal="body_entered" from="Apple11/Apple_Area11" to="." method="_on_apple_area_11_body_entered"]
