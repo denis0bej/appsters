@@ -2,9 +2,14 @@ extends Control
 @onready var menu: TextureRect = $Menu
 @onready var v_box_container: VBoxContainer = $VBoxContainer
 @onready var player: CharacterBody2D = $"../.."
+@onready var settings_menu: Control = $SettingsMenu
+@onready var texture_rect: TextureRect = $TextureRect
+
 
 var is_menu_on = true
 func _ready():
+	texture_rect.hide()
+	settings_menu.hide()
 	menu.hide()
 	v_box_container.hide()
 	$VBoxContainer/ResumeButton.pressed.connect(_on_resume)
@@ -16,9 +21,14 @@ func _on_resume():
 	v_box_container.hide()
 	player.speed = 70
 	is_menu_on = true
+	texture_rect.hide()
 
 func _on_settings():
-	get_tree().change_scene_to_file("res://scenes/settings_menu.tscn")
+	settings_menu.is_main = 0
+	settings_menu.show()
+	texture_rect.show()
+	menu.hide()
+	v_box_container.hide()
 
 func _on_quit():
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
