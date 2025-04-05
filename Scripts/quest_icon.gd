@@ -5,9 +5,13 @@ extends TextureRect
 @onready var quest_text: Label = $Quest_display/Quest_text
 var typing_speed = 0.05
 var quest_is_show = true
+var isTriggered = true
+var current_quest = ""
  #Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	quest_display.hide()
+	quest_text.hide()
+	current_quest = "Get the dog outside.\nHint: yellow door"
 
 
  #Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,16 +21,19 @@ func _process(delta: float) -> void:
 			quest_is_show = false
 			quest_display.show()
 			quest_text.show()
-			start_typing("Get the dog outside.\nHint: yellow door")
+			start_typing(current_quest)
 		else:
 			quest_is_show = true
 			quest_display.hide()
 			quest_text.hide()
+			
 		
 func start_typing(current_text):
 	quest_text.text = ""
 	var i = 0
 	while i < len(current_text):
+		if (quest_is_show == true):
+			break
 		quest_text.text += current_text[i]
 		await get_tree().create_timer(typing_speed).timeout
 		i += 1
@@ -39,3 +46,14 @@ func is_mouse_over_object(collision_shape: CollisionShape2D) -> bool:
 		# Verifică dacă mouse-ul este în interiorul formei
 		return shape.get_rect().has_point(mouse_position)
 	return false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if (isTriggered) && body.name.contains("Player"):
+		isTriggered = false
+		current_quest = "Quest completed!"
+		await start_typing(current_quest)
+		current_quest = "Follow the dog"
+		start_typing(current_quest)
+	
+	

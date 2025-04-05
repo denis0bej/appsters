@@ -6,6 +6,8 @@ extends AnimationPlayer
 @onready var area_2d: Area2D = $Area2D
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var animation_doggy: AnimationPlayer = $"../../../doggy/AnimationPlayer"
+@onready var falling_artefact: AudioStreamPlayer = $"../../../falling_artefact"
+@onready var player: CharacterBody2D = $"../.."
 
 var typing_speed = 0.05
 var isTriggered = true
@@ -20,8 +22,11 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if (isTriggered):
+	if (isTriggered) && body.name.contains("Player"):
 		isTriggered = false
+		player.speed = 0
+		falling_artefact.play()
+		await get_tree().create_timer(4).timeout
 		explosion_animation.play("explosion")
 		timer.start(1.5)
 	
@@ -32,6 +37,7 @@ func _on_timer_timeout() -> void:
 	dialogue_text.show()
 	await start_typing("Wh...Wh..What happend?")
 	wait_for_input("Interact")
+	player.speed = 70
 	dialogue.hide()
 	dialogue_text.hide()
 	animation_doggy.play("run")
