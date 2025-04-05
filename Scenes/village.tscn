@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b1swnhnnvx2n4"]
+[gd_scene load_steps=27 format=4 uid="uid://cevvsjycti0q5"]
 
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="1_hsw83"]
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_ofn1o"]
