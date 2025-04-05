@@ -4,21 +4,8 @@ extends CharacterBody2D
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var direction := Vector2.ZERO
 
-var artefact: bool
-var can_use_art: bool #when in range of using
-var in_range: bool
-var art_cooldown: bool #false = no cooldown
-var tree_anim: bool
-
-@export var tree: CharacterBody2D
-
 func _ready() -> void:
-	artefact = true
-	can_use_art = true
-	in_range = false
-	art_cooldown = false
-	tree_anim = false
-	tree = get_parent().get_node("Tree")
+	pass
 
 func _physics_process(delta: float) -> void:
 	#Movement
@@ -35,24 +22,6 @@ func _physics_process(delta: float) -> void:
 		anim_sprite.stop()
 	global_position = global_position.snapped(Vector2.ONE)
 	
-	#Artefact
-	if in_range and art_cooldown == false:
-		can_use_art = true
-	else:
-		can_use_art = false
-	
-	if artefact == true: #player has artefact in hand
-		if can_use_art == true: #didn't already use or is in range of using
-			print("Press lmb to use")
-			if Input.is_action_just_pressed("lmb"):
-				print("used")
-				art_cooldown = true
-				$Timer.start(3)
-				print("sdfsdf")
-				tree.get_node("Tree_bw_anim").play("tree_bw")
-				tree_anim = true
-				if tree_anim == false:
-					tree.stop()
 
 func play_walk_animation(dir: Vector2) -> void:
 	if abs(dir.x) >= abs(dir.y):
@@ -65,15 +34,3 @@ func play_walk_animation(dir: Vector2) -> void:
 			anim_sprite.play("Run_South")
 		else:
 			anim_sprite.play("Run_North")
-
-func artefact_use():
-	in_range = true
-
-func artefact_dont_use():
-	in_range = false
-
-func tree_bw_animation():
-	tree_anim = false
-
-func _on_timer_timeout() -> void:
-	art_cooldown = false
