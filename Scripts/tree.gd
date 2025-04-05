@@ -6,6 +6,7 @@ var art_cooldown:= false
 var real_apples:= false
 var apple_pickup:= false
 var apple_to_grab: Sprite2D
+@onready var control:= $"../Camera2D/Control"
 
 func _ready() -> void:
 	$Small_tree.visible = false
@@ -20,6 +21,17 @@ func _ready() -> void:
 	$Apple9.visible = false
 	$Apple10.visible = false
 	$Apple11.visible = false
+	$Apple1/Apple_Area1/CollisionShape2D.disabled = true
+	$Apple2/Apple_Area2/CollisionShape2D.disabled = true
+	$Apple3/Apple_Area3/CollisionShape2D.disabled = true
+	$Apple4/Apple_Area4/CollisionShape2D.disabled = true
+	$Apple5/Apple_Area5/CollisionShape2D.disabled = true
+	$Apple6/Apple_Area6/CollisionShape2D.disabled = true
+	$Apple7/Apple_Area7/CollisionShape2D.disabled = true
+	$Apple8/Apple_Area8/CollisionShape2D.disabled = true
+	$Apple9/Apple_Area9/CollisionShape2D.disabled = true
+	$Apple10/Apple_Area10/CollisionShape2D.disabled = true
+	$Apple11/Apple_Area11/CollisionShape2D.disabled = true
 
 func _process(delta: float) -> void:
 		#Artefact
@@ -40,79 +52,94 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("Interact"):
 			interact(apple_to_grab)
 
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
-		#body.artefact_use();
 		in_range = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name.contains("Player"):
-		#body.artefact_dont_use();
 		in_range = false
 		
 
 func interact(apple: Sprite2D) -> void:
 	apple.visible = false
 	apple_pickup = false
+	
+	var texture:= apple.texture
+	control.get_node("Slot4/Item4").texture = texture
+	
+	control.item_slot(4)
+	control.item_counter()
 
 func _on_apple_area_1_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple1
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple1
 
 
 func _on_apple_area_2_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple2
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple2
 
 
 func _on_apple_area_3_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple3
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple3
 
 
 func _on_apple_area_4_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple4
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple4
 
 
 func _on_apple_area_5_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple5
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple5
 
 
 func _on_apple_area_6_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple6
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple6
 
 
 func _on_apple_area_7_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple7
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple7
 
 
 func _on_apple_area_8_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple8
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple8
 
 
 func _on_apple_area_9_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple9
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple9
 
 
 func _on_apple_area_10_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple10
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple10
 
 
 func _on_apple_area_11_body_entered(body: Node2D) -> void:
-	apple_pickup = true
-	apple_to_grab = $Apple11
+	if body.name.contains("Player"):
+		apple_pickup = true
+		apple_to_grab = $Apple11
 
 
 func _on_timer_timeout() -> void:
-	print("sdfsdf")
 	if real_apples == false:
 		$CollisionPolygon2D.disabled = true
 		$Small_tree.visible = true
@@ -127,6 +154,17 @@ func _on_timer_timeout() -> void:
 		$Apple9.visible = true
 		$Apple10.visible = true
 		$Apple11.visible = true
+		$Apple1/Apple_Area1/CollisionShape2D.disabled = false
+		$Apple2/Apple_Area2/CollisionShape2D.disabled = false
+		$Apple3/Apple_Area3/CollisionShape2D.disabled = false
+		$Apple4/Apple_Area4/CollisionShape2D.disabled = false
+		$Apple5/Apple_Area5/CollisionShape2D.disabled = false
+		$Apple6/Apple_Area6/CollisionShape2D.disabled = false
+		$Apple7/Apple_Area7/CollisionShape2D.disabled = false
+		$Apple8/Apple_Area8/CollisionShape2D.disabled = false
+		$Apple9/Apple_Area9/CollisionShape2D.disabled = false
+		$Apple10/Apple_Area10/CollisionShape2D.disabled = false
+		$Apple11/Apple_Area11/CollisionShape2D.disabled = false
 		$Tree_bw_anim.visible = false
 		art_cooldown = false
 		real_apples = true
