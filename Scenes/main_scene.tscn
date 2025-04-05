@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dew2aybwhiarj" path="res://Scenes/camera_2d.gd" id="5_iacmt"]
 [ext_resource type="PackedScene" path="res://Scenes/tree.tscn" id="6_6ev3c"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="6_maf8m"]
-[ext_resource type="PackedScene" uid="uid://b68cerr67vmdd" path="res://Scenes/Inventory.tscn" id="9_mai8y"]
+[ext_resource type="PackedScene" uid="uid://bbrknyd7cbleb" path="res://Scenes/Inventory.tscn" id="9_mai8y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m1efj"]
 texture = ExtResource("1_6l7je")
