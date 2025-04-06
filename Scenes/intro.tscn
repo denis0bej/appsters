@@ -1,6 +1,6 @@
 [gd_scene load_steps=54 format=4 uid="uid://dkjmdo5g20e6a"]
 
-[ext_resource type="AudioStream" uid="uid://q8c05jpjptex" path="res://Art/shine_artefact_sound.mp3" id="1_et3xt"]
+[ext_resource type="AudioStream" uid="uid://c84pq76rftrk0" path="res://Art/shine_artefact_sound.mp3" id="1_et3xt"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="1_hwjxs"]
 [ext_resource type="PackedScene" uid="uid://ck5ta15o0at08" path="res://Scenes/doggy.tscn" id="1_pgam6"]
 [ext_resource type="Script" uid="uid://fdt1aynmrvge" path="res://Scripts/animation_player.gd" id="2_g8dlr"]
@@ -16,12 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://yx5jexw3bj2i" path="res://Scenes/pausemenu.tscn" id="6_odey0"]
 [ext_resource type="Texture2D" uid="uid://dtgybfxausvtj" path="res://Art/quest_displayer.png" id="7_a7jvs"]
 [ext_resource type="Script" uid="uid://bdvnlvxa01s6k" path="res://Scripts/explosion_animation.gd" id="10_33jql"]
-[ext_resource type="Texture2D" uid="uid://1b1c6xnux38v" path="res://Art/trees_2.png" id="14_et3xt"]
-[ext_resource type="AudioStream" uid="uid://08dc3of26dfb" path="res://Art/Ambient 1.mp3" id="16_iab25"]
-[ext_resource type="AudioStream" uid="uid://ctcv2sbpbcob1" path="res://Art/falling_object.mp3" id="17_b6uv1"]
-[ext_resource type="Texture2D" uid="uid://d35mm2bbinn17" path="res://Art/Hole.png" id="19_jfi4t"]
+[ext_resource type="Texture2D" uid="uid://hgthp1w8vek3" path="res://Art/trees_2.png" id="14_et3xt"]
+[ext_resource type="AudioStream" uid="uid://cso8a5tmj66e6" path="res://Art/Ambient 1.mp3" id="16_iab25"]
+[ext_resource type="AudioStream" uid="uid://c6kohaaarwwff" path="res://Art/falling_object.mp3" id="17_b6uv1"]
+[ext_resource type="Texture2D" uid="uid://cf8jdg0u5n3qq" path="res://Art/Hole.png" id="19_jfi4t"]
 [ext_resource type="Script" uid="uid://qsnlbas4mxuo" path="res://Scripts/teleporting.gd" id="21_yny27"]
-[ext_resource type="Texture2D" uid="uid://cgg2mfdaobcso" path="res://Art/light_wave.png" id="22_3pufg"]
+[ext_resource type="Texture2D" uid="uid://bkxhcrgig1p8b" path="res://Art/light_wave.png" id="22_3pufg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pufg"]
 texture = ExtResource("14_et3xt")
