@@ -16,7 +16,7 @@ func _ready() -> void:
 	skip_text.hide()
 	ending.hide()
 	animation_player.play("explosion")
-	player.speed = 0
+	player.still = true
 	await get_tree().create_timer(2.0).timeout
 	label.show()
 	dialogue.show()
@@ -33,7 +33,7 @@ func _ready() -> void:
 	label.hide()
 	dialogue.hide()
 	skip_text.hide()
-	player.speed = 70
+	player.still = false
 	animation_player1.play("ending")
 	await get_tree().create_timer(3.8).timeout
 	label.show()

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed := 70
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var direction := Vector2.ZERO
-var still:= true
+@export var still:= true
 
 
 func _physics_process(delta: float) -> void:

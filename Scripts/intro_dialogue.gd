@@ -7,7 +7,7 @@ var typing_speed = 0.05
 @onready var skip_text: Label = $"../SkipText"
 
 func _ready() -> void:
-	player.speed = 0
+	player.still = true
 	texture_rect.show()
 	skip_text.text = "Press [E] to skip"
 	await start_typing("What a beautiful and sunny sunday is today!")
@@ -17,7 +17,7 @@ func _ready() -> void:
 	label.text = ""
 	texture_rect.hide()
 	skip_text.text = ""
-	player.speed = 70
+	player.still = false
 
 func start_typing(current_text):
 	label.text = ""
