@@ -37,5 +37,3 @@ func wait_for_input(action_name: String) -> void:
 		if Input.is_action_just_pressed(action_name):
 			break
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
