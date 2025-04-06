@@ -1,6 +1,6 @@
 extends AnimationPlayer
 @onready var animation_player: AnimationPlayer = $"."
-
+var already_walked = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,4 +14,6 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
-		animation_player.play("walk")
+		if already_walked:
+			already_walked = false
+			animation_player.play("walk")

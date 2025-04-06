@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Appsters"
-run/main_scene="uid://d0lakgrv581lx"
+run/main_scene="uid://c2nya4fiqe0k7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Art/icon.svg"
 

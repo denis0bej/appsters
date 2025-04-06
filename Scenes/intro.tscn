@@ -23,7 +23,7 @@
 [ext_resource type="Script" uid="uid://qsnlbas4mxuo" path="res://Scripts/teleporting.gd" id="21_yny27"]
 [ext_resource type="Texture2D" uid="uid://cgg2mfdaobcso" path="res://Art/light_wave.png" id="22_3pufg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_et3xt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pufg"]
 texture = ExtResource("14_et3xt")
 0:0/0 = 0
 1:0/0 = 0
@@ -39,7 +39,7 @@ texture = ExtResource("14_et3xt")
 3:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jfi4t"]
-sources/0 = SubResource("TileSetAtlasSource_et3xt")
+sources/0 = SubResource("TileSetAtlasSource_3pufg")
 
 [sub_resource type="Animation" id="Animation_g8dlr"]
 length = 0.001
@@ -74,7 +74,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_b6uv1"]
 resource_name = "run"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -82,7 +82,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.26667),
+"times": PackedFloat32Array(0, 2.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(115.328, 9.74239), Vector2(170, -204)]
@@ -98,7 +98,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 3.33333, 5.2),
+"times": PackedFloat32Array(0, 1.03333, 3.73333, 6.16667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(285, 111), Vector2(287, 158), Vector2(119, 156), Vector2(115.328, 9.74239)]
@@ -155,9 +155,9 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33jql"]
-size = Vector2(348, 20)
+size = Vector2(384, 20)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn7w8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kddu7"]
 texture = ExtResource("2_hwjxs")
 25:0/0 = 0
 26:0/0 = 0
@@ -730,7 +730,7 @@ texture = ExtResource("2_hwjxs")
 60:11/0 = 0
 60:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.85619, -8, 4.85619, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b26wi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2n2py"]
 texture = ExtResource("3_rsiac")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, 5.2159, 8, 4.85619, -8)
@@ -738,7 +738,7 @@ texture = ExtResource("3_rsiac")
 0:1/0/z_index = 3
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.41732, 8, 3.77703, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jfi4t"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uqcso"]
 texture = ExtResource("14_et3xt")
 1:0/0 = 0
 1:0/0/z_index = 1
@@ -760,9 +760,9 @@ texture = ExtResource("14_et3xt")
 
 [sub_resource type="TileSet" id="TileSet_ewknp"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_nn7w8")
-sources/1 = SubResource("TileSetAtlasSource_b26wi")
-sources/7 = SubResource("TileSetAtlasSource_jfi4t")
+sources/0 = SubResource("TileSetAtlasSource_kddu7")
+sources/1 = SubResource("TileSetAtlasSource_2n2py")
+sources/7 = SubResource("TileSetAtlasSource_uqcso")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k86p3"]
 size = Vector2(38, 33)
@@ -972,7 +972,7 @@ script = ExtResource("10_33jql")
 [node name="Area2D" type="Area2D" parent="Player/Camera2D/ExplosionAnimation"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Camera2D/ExplosionAnimation/Area2D"]
-position = Vector2(5, 34)
+position = Vector2(23, 34)
 shape = SubResource("RectangleShape2D_33jql")
 
 [node name="Timer" type="Timer" parent="Player/Camera2D/ExplosionAnimation"]

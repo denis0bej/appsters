@@ -1,23 +1,23 @@
 [gd_scene load_steps=66 format=4 uid="uid://cfueqn6d302fy"]
 
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="1_clpxm"]
-[ext_resource type="Texture2D" uid="uid://c22enmhkcnxp8" path="res://Art/castleFloors.png" id="1_nnqyf"]
+[ext_resource type="Texture2D" uid="uid://w2uh5iwvv4rx" path="res://Art/castleFloors.png" id="1_nnqyf"]
 [ext_resource type="Texture2D" uid="uid://bbi8h6akggu6a" path="res://Art/Walls.png" id="2_nnqyf"]
 [ext_resource type="Texture2D" uid="uid://cn7wfmytrihgv" path="res://Art/Roofs.png" id="3_qn2cr"]
-[ext_resource type="Texture2D" uid="uid://dorfjgp00tq1n" path="res://Art/castle_walls.png" id="4_i7gev"]
+[ext_resource type="Texture2D" uid="uid://cs7d6x3rgph6" path="res://Art/castle_walls.png" id="4_i7gev"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="5_xtbb3"]
-[ext_resource type="Texture2D" uid="uid://dl2jid1141lsi" path="res://Art/pillar.png" id="6_nnqyf"]
+[ext_resource type="Texture2D" uid="uid://ngc0pocf8o4k" path="res://Art/pillar.png" id="6_nnqyf"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="7_mh01j"]
-[ext_resource type="Texture2D" uid="uid://s12qs7bp3cs1" path="res://Art/bigThrone.png" id="9_qn2cr"]
-[ext_resource type="Texture2D" uid="uid://cs0upwer13x2p" path="res://Art/Prince.png" id="10_i7gev"]
-[ext_resource type="Script" uid="uid://dajfwppia5o2l" path="res://Scenes/animation_player.gd" id="10_mh01j"]
+[ext_resource type="Texture2D" uid="uid://df832wxb5p3j3" path="res://Art/bigThrone.png" id="9_qn2cr"]
+[ext_resource type="Texture2D" uid="uid://ckoh70tga7nta" path="res://Art/Prince.png" id="10_i7gev"]
+[ext_resource type="Script" path="res://Scenes/animation_player.gd" id="10_mh01j"]
 [ext_resource type="Texture2D" uid="uid://d0qhdxqqd0o71" path="res://Art/Player_sprites.png" id="11_xtbb3"]
-[ext_resource type="Script" uid="uid://dkol8lbrvxpy0" path="res://Scenes/player_animation.gd" id="12_m7auy"]
+[ext_resource type="Script" path="res://Scenes/player_animation.gd" id="12_m7auy"]
 [ext_resource type="PackedScene" uid="uid://cmrjpp510iwrb" path="res://Scenes/knight.tscn" id="14_5jb5p"]
-[ext_resource type="Script" uid="uid://bhul3ghsghxlu" path="res://Scripts/chained_doggy.gd" id="15_a3ny1"]
-[ext_resource type="Texture2D" uid="uid://cwsnbewaaifgh" path="res://Art/Doggy_chain.png" id="15_vo3gu"]
+[ext_resource type="Script" path="res://Scripts/chained_doggy.gd" id="15_a3ny1"]
+[ext_resource type="Texture2D" uid="uid://bw1lopqcrccpp" path="res://Art/Doggy_chain.png" id="15_vo3gu"]
 [ext_resource type="PackedScene" uid="uid://dokc6u0ukiaqy" path="res://Scenes/pillar.tscn" id="17_wdhbe"]
-[ext_resource type="Script" uid="uid://51c4u06ac4mv" path="res://Scenes/path_follow_2d.gd" id="18_lp74d"]
+[ext_resource type="Script" path="res://Scenes/path_follow_2d.gd" id="18_lp74d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qn2cr"]
 texture = ExtResource("1_nnqyf")
@@ -3588,7 +3588,7 @@ animation = &"Run_North"
 offset = Vector2(-1, -1)
 script = ExtResource("12_m7auy")
 
-[node name="fnight2" parent="." instance=ExtResource("14_5jb5p")]
+[node name="knight2" parent="." instance=ExtResource("14_5jb5p")]
 position = Vector2(-23, -34)
 
 [node name="Chained_doggy" type="CharacterBody2D" parent="."]
