@@ -62,7 +62,7 @@ size = Vector2(133, 88)
 size = Vector2(3, 11.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m36md"]
-radius = 5.0
+radius = 3.53553
 
 [node name="Tree" type="CharacterBody2D"]
 script = ExtResource("1_rsuno")
@@ -201,13 +201,24 @@ shape = SubResource("CircleShape2D_m36md")
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Apple1/Apple_Area1" to="." method="_on_apple_area_1_body_entered"]
+[connection signal="body_exited" from="Apple1/Apple_Area1" to="." method="_on_apple_area_1_body_exited"]
 [connection signal="body_entered" from="Apple2/Apple_Area2" to="." method="_on_apple_area_2_body_entered"]
+[connection signal="body_exited" from="Apple2/Apple_Area2" to="." method="_on_apple_area_2_body_exited"]
 [connection signal="body_entered" from="Apple3/Apple_Area3" to="." method="_on_apple_area_3_body_entered"]
+[connection signal="body_exited" from="Apple3/Apple_Area3" to="." method="_on_apple_area_3_body_exited"]
 [connection signal="body_entered" from="Apple4/Apple_Area4" to="." method="_on_apple_area_4_body_entered"]
+[connection signal="body_exited" from="Apple4/Apple_Area4" to="." method="_on_apple_area_4_body_exited"]
 [connection signal="body_entered" from="Apple5/Apple_Area5" to="." method="_on_apple_area_5_body_entered"]
+[connection signal="body_exited" from="Apple5/Apple_Area5" to="." method="_on_apple_area_5_body_exited"]
 [connection signal="body_entered" from="Apple6/Apple_Area6" to="." method="_on_apple_area_6_body_entered"]
+[connection signal="body_exited" from="Apple6/Apple_Area6" to="." method="_on_apple_area_6_body_exited"]
 [connection signal="body_entered" from="Apple7/Apple_Area7" to="." method="_on_apple_area_7_body_entered"]
+[connection signal="body_exited" from="Apple7/Apple_Area7" to="." method="_on_apple_area_7_body_exited"]
 [connection signal="body_entered" from="Apple8/Apple_Area8" to="." method="_on_apple_area_8_body_entered"]
+[connection signal="body_exited" from="Apple8/Apple_Area8" to="." method="_on_apple_area_8_body_exited"]
 [connection signal="body_entered" from="Apple9/Apple_Area9" to="." method="_on_apple_area_9_body_entered"]
+[connection signal="body_exited" from="Apple9/Apple_Area9" to="." method="_on_apple_area_9_body_exited"]
 [connection signal="body_entered" from="Apple10/Apple_Area10" to="." method="_on_apple_area_10_body_entered"]
+[connection signal="body_exited" from="Apple10/Apple_Area10" to="." method="_on_apple_area_10_body_exited"]
 [connection signal="body_entered" from="Apple11/Apple_Area11" to="." method="_on_apple_area_11_body_entered"]
+[connection signal="body_exited" from="Apple11/Apple_Area11" to="." method="_on_apple_area_11_body_exited"]
