@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 
 
 func show_dialogue():
-	$"../../Camera2D/Dialogue".show_dialogue("Hi, me kawai, pokemon go type like?")
+	$"../../Camera2D/Dialogue".show_dialogue("Aren't these flowers beautiful?")
 
 
 func _on_body_entered(body: Node2D) -> void:
