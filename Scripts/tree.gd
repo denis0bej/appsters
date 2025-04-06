@@ -6,6 +6,7 @@ var art_cooldown:= false
 var real_apples:= false
 var apple_pickup:= false
 var apple_to_grab: Sprite2D
+var cnt:= 0
 @onready var control:= $"../Camera2D/Control"
 
 func _ready() -> void:
@@ -49,8 +50,9 @@ func _process(delta: float) -> void:
 			$Tree_bw_anim.play("tree_bw")
 	
 	if apple_pickup == true:
-		if Input.is_action_just_pressed("Interact"):
+		if Input.is_action_just_pressed("Interact") and cnt < 11:
 			interact(apple_to_grab)
+			cnt = cnt + 1
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -75,66 +77,89 @@ func interact(apple: Sprite2D) -> void:
 
 func _on_apple_area_1_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple1
+	
 
 
 func _on_apple_area_2_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple2
 
 
 func _on_apple_area_3_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple3
 
 
 func _on_apple_area_4_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple4
 
 
 func _on_apple_area_5_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple5
 
 
 func _on_apple_area_6_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple6
 
 
 func _on_apple_area_7_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple7
 
 
 func _on_apple_area_8_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple8
 
 
 func _on_apple_area_9_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple9
 
 
 func _on_apple_area_10_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple10
 
 
 func _on_apple_area_11_body_entered(body: Node2D) -> void:
 	if body.name.contains("Player"):
+		if apple_pickup == true:
+			pass
 		apple_pickup = true
 		apple_to_grab = $Apple11
 
@@ -168,41 +193,3 @@ func _on_timer_timeout() -> void:
 		$Tree_bw_anim.visible = false
 		art_cooldown = false
 		real_apples = true
-
-
-
-func _on_apple_area_1_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-
-func _on_apple_area_2_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-
-func _on_apple_area_3_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-
-func _on_apple_area_4_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_5_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_6_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_7_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_8_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_9_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_10_body_exited(body: Node2D) -> void:
-	apple_pickup = false
-
-func _on_apple_area_11_body_exited(body: Node2D) -> void:
-	apple_pickup = false

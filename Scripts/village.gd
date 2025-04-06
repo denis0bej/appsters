@@ -5,6 +5,7 @@ var fading_out := false  # true = fading to black, false = fading back in
 var cnt := 0.0
 
 func _ready() -> void:
+	$Player.still = true
 	$FadeToBlack.visible = true
 	$AnimationPlayer/Knight2.z_index = 0
 	$FadeToBlack.modulate.a = 0.0  # Start transparent
@@ -46,7 +47,6 @@ func _physics_process(delta: float) -> void:
 
 func sec_anim():
 	$AnimationPlayer/Prince.visible = false
-	$Player.still = false
 	$AnimationPlayer/Knight.visible = false
 	$AnimationPlayer/Knight2.visible = false
 	$doggy.visible = false
@@ -63,3 +63,4 @@ func sec_anim():
 	$"Camera2D/Dialogue".hide()
 	await get_tree().create_timer(1.5).timeout
 	$Camera2D/Control/Slot1/Item1.texture = $AnimationPlayer/ArtefactBw.texture
+	$Player.still = false
