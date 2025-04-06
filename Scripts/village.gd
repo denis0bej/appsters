@@ -45,10 +45,9 @@ func _physics_process(delta: float) -> void:
 				sec_anim()
 
 
+
 func sec_anim():
 	$AnimationPlayer/Prince.visible = false
-	$AnimationPlayer/Knight.visible = false
-	$AnimationPlayer/Knight2.visible = false
 	$doggy.visible = false
 	$"Camera2D/Dialogue".show()
 	await get_tree().create_timer(1).timeout
@@ -58,7 +57,7 @@ func sec_anim():
 	await get_tree().create_timer(7).timeout
 	$"Camera2D/Dialogue".show_dialogue("He will most likely sell or trade it to you if you\ngive him what he wants")
 	await get_tree().create_timer(6).timeout
-	$"Camera2D/Dialogue".show_dialogue("Sorry but I have to go, Mommy's gonna be mad")
+	$"Camera2D/Dialogue".show_dialogue("Sorry but I have to go, Mommy's gonna be mad\nbecause I didn't take care of the garden")
 	await get_tree().create_timer(7).timeout
 	$"Camera2D/Dialogue".hide()
 	await get_tree().create_timer(1.5).timeout

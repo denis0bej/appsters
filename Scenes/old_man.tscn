@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://chpngd4xujipl"]
+[gd_scene load_steps=6 format=3 uid="uid://chpngd4xujipl"]
 
 [ext_resource type="Script" uid="uid://drfexstetpe43" path="res://Scripts/old_man.gd" id="1_fpx3k"]
 [ext_resource type="Texture2D" uid="uid://cvn1fkhh1iynd" path="res://Art/Old_man.png" id="1_vtomo"]
+[ext_resource type="Texture2D" uid="uid://bih8qss0acuk6" path="res://Art/Artefact_fw.png" id="3_eyoxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyoxv"]
 size = Vector2(20, 12.5)
@@ -25,6 +26,10 @@ texture = ExtResource("1_vtomo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(14, 7.5625)
 shape = SubResource("RectangleShape2D_k0ret")
+
+[node name="Artefact_fw" type="Sprite2D" parent="."]
+position = Vector2(11, 7)
+texture = ExtResource("3_eyoxv")
 
 [connection signal="body_entered" from="Interact_area" to="Interact_area" method="_on_body_entered"]
 [connection signal="body_exited" from="Interact_area" to="Interact_area" method="_on_body_exited"]

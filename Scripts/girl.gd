@@ -12,12 +12,11 @@ func _physics_process(delta: float) -> void:
 
 
 func show_dialogue():
-	$"../../Camera2D/Dialogue".show_dialogue("Aren't these flowers beautiful?")
+	$"../../Camera2D/Dialogue".show_dialogue("Oh hey! Poor flowers...I forgot to take\ncare of them. Can you help me?")
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		print("sdfsdf")
 		$"../interact_button2".on()
 		player_in_range = true
 
