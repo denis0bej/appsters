@@ -8,7 +8,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("Interact"):
 		player_in_range = false
+		$"../../Garden/Label".visible = true
 		show_dialogue()
+
 
 
 func show_dialogue():

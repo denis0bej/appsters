@@ -5,6 +5,7 @@ var fade := false
 var fading_out := false  # true = fading to black, false = fading back in
 var cnt := 0.0
 
+
 func _ready() -> void:
 	$Player.still = true
 	$FadeToBlack.visible = true
@@ -45,7 +46,8 @@ func _physics_process(delta: float) -> void:
 			if cnt <= 0.0:
 				fade = false  # Fade complete
 				sec_anim()
-
+	if Input.is_action_just_pressed("lmb"):
+		$Camera2D/LMB.visible = false
 
 
 func sec_anim():
@@ -65,3 +67,5 @@ func sec_anim():
 	await get_tree().create_timer(1.5).timeout
 	$Camera2D/Control/Slot1/Item1.texture = $AnimationPlayer/ArtefactBw.texture
 	$Player.still = false
+	$Camera2D/LMB.visible = true
+	

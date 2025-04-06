@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cogx4hrvg17ps"]
+[gd_scene load_steps=3 format=3 uid="uid://cje7rpujox6kg"]
 
-[ext_resource type="Texture2D" uid="uid://cqkxl1cigq1mc" path="res://Art/interact_button.png" id="1_2wkci"]
+[ext_resource type="Texture2D" uid="uid://dgpd70akfm608" path="res://Art/interact_button_nou.png" id="2_28dxu"]
 [ext_resource type="Script" uid="uid://bo06qn6378d6j" path="res://Scripts/interact_button.gd" id="2_75ccp"]
 
 [node name="interact_button" type="Control"]
@@ -13,6 +13,6 @@ script = ExtResource("2_75ccp")
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.933333)
 layout_mode = 0
-offset_right = 10.0
-offset_bottom = 10.0
-texture = ExtResource("1_2wkci")
+offset_right = 8.0
+offset_bottom = 8.0
+texture = ExtResource("2_28dxu")

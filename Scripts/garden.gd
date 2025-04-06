@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if inventory.cnt2 == 1 and in_range and Input.is_action_just_pressed("Interact") and inventory.cnt4 == 1:
+	if inventory.cnt2 == 1 and in_range and Input.is_action_just_pressed("rmb") and inventory.cnt4 == 1:
 		$AnimatedSprite2D.visible = true
 		in_range = false
 		$AnimatedSprite2D.play()
@@ -25,13 +25,14 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and inventory.cnt2 == 1:
-		$"interact_button2".on()
+		$"../Camera2D/RMB".visible = true
+		$Label.visible = false
 		in_range = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player" and inventory.cnt2 == 1:
-		$"interact_button2"._ready()
+		$"../Camera2D/RMB".visible = false
 		in_range = false
 
 

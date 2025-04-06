@@ -26,12 +26,15 @@ func _physics_process(delta: float) -> void:
 
 func show_dialogue():
 	var inventory := $"../../Camera2D/Control"
-	if inventory.cnt4 >= 10:
-		$"../../Camera2D/Dialogue".show_dialogue("Pleasure doing business with you")
-		inventory.cnt4 = 1
-		inventory.cnt2 = 1
-		$"../../Camera2D/Control/Slot4/Label4".text = "1"
-		$"../../Camera2D/Control/Slot2/Item2".texture = $"../Artefact_fw".texture
-		$"../Artefact_fw".visible = false
-	else:
-		$"../../Camera2D/Dialogue".show_dialogue("10 apples for a rock?\nThat's a steal to mee")
+	var bought:= false
+	if bought == false:
+		if inventory.cnt4 >= 10:
+			$"../../Camera2D/Dialogue".show_dialogue("Pleasure doing business with you")
+			inventory.cnt4 = 1
+			inventory.cnt2 = 1
+			$"../../Camera2D/Control/Slot4/Label4".text = "1"
+			$"../../Camera2D/Control/Slot2/Item2".texture = $"../Artefact_fw".texture
+			$"../Artefact_fw".visible = false
+			bought = true
+		else:
+			$"../../Camera2D/Dialogue".show_dialogue("10 apples for a rock?\nThat's a steal to mee")
