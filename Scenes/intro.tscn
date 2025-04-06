@@ -767,7 +767,7 @@ sources/7 = SubResource("TileSetAtlasSource_uqcso")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k86p3"]
 size = Vector2(38, 33)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7jvs"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k86p3"]
 texture = ExtResource("4_3bmuq")
 0:0/0 = 0
 1:0/0 = 0
@@ -778,7 +778,7 @@ texture = ExtResource("4_3bmuq")
 2:1/0 = 0
 3:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgam6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tiwhh"]
 texture = ExtResource("4_geirw")
 0:0/0 = 0
 1:0/0 = 0
@@ -791,7 +791,7 @@ texture = ExtResource("4_geirw")
 3:1/0 = 0
 4:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itfcf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yl2l6"]
 texture = ExtResource("3_rsiac")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.85619, -8, 8, -8, 8, 8, 4.85619, 8)
@@ -800,9 +800,9 @@ texture = ExtResource("3_rsiac")
 
 [sub_resource type="TileSet" id="TileSet_g8dlr"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_a7jvs")
-sources/1 = SubResource("TileSetAtlasSource_pgam6")
-sources/2 = SubResource("TileSetAtlasSource_itfcf")
+sources/0 = SubResource("TileSetAtlasSource_k86p3")
+sources/1 = SubResource("TileSetAtlasSource_tiwhh")
+sources/2 = SubResource("TileSetAtlasSource_yl2l6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odey0"]
 size = Vector2(18, 807.5)
