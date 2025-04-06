@@ -1,18 +1,18 @@
-[gd_scene load_steps=39 format=4 uid="uid://baq8niwh2dhu4"]
+[gd_scene load_steps=39 format=4 uid="uid://cfh4o56eflkb3"]
 
 [ext_resource type="Texture2D" uid="uid://c62wjmp6nnkqr" path="res://Art/road_intro.png" id="1_ewxmf"]
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="2_ktkvr"]
 [ext_resource type="Texture2D" uid="uid://bh4tyv3nlkt0i" path="res://Art/wood_gate_intro.png" id="3_kdtd2"]
 [ext_resource type="Texture2D" uid="uid://if6vf55i7a1h" path="res://Art/Buildings_Colour2.png" id="4_m56lo"]
-[ext_resource type="Texture2D" uid="uid://1b1c6xnux38v" path="res://Art/trees_2.png" id="5_5atky"]
+[ext_resource type="Texture2D" uid="uid://bau52fmq1uc2f" path="res://Art/trees_2.png" id="5_5atky"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="6_5wpom"]
 [ext_resource type="Texture2D" uid="uid://cboyknw4encla" path="res://Art/dialogue_block.png" id="7_rbgva"]
 [ext_resource type="Script" uid="uid://cu581o1xjg6hf" path="res://Scripts/dialogue_ending.gd" id="8_ewxmf"]
 [ext_resource type="FontFile" uid="uid://rd8qo46nok5b" path="res://Art/ByteBounce.ttf" id="9_avhfo"]
 [ext_resource type="PackedScene" uid="uid://ck5ta15o0at08" path="res://Scenes/doggy.tscn" id="10_kkvlj"]
-[ext_resource type="Texture2D" uid="uid://danq0jjkktx4q" path="res://Art/ending.png" id="10_ktkvr"]
-[ext_resource type="Texture2D" uid="uid://bumger7d7teyi" path="res://Art/empty_hole.png" id="11_myvun"]
-[ext_resource type="Texture2D" uid="uid://cgg2mfdaobcso" path="res://Art/light_wave.png" id="12_gfwx3"]
+[ext_resource type="Texture2D" uid="uid://c4vldia8uh01c" path="res://Art/ending.png" id="10_ktkvr"]
+[ext_resource type="Texture2D" uid="uid://d0bi5bd7n13ub" path="res://Art/empty_hole.png" id="11_myvun"]
+[ext_resource type="Texture2D" uid="uid://bhf3nnmlcgvgy" path="res://Art/light_wave.png" id="12_gfwx3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0t0ns"]
 texture = ExtResource("1_ewxmf")

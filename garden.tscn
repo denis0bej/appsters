@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://k3x2gqocp5o7"]
+
+[ext_resource type="Script" uid="uid://ce2naafv6yk8q" path="res://Scripts/garden.gd" id="1_2vcl1"]
+[ext_resource type="Texture2D" uid="uid://bfppcpib5e6mk" path="res://Art/Apple_Expire.png" id="2_gc0xh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb2l5"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i01nk"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdfy2"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ago6t"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yajlf"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2q2a"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rje30"]
+atlas = ExtResource("2_gc0xh")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnshv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb2l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i01nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdfy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ago6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yajlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2q2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rje30")
+}],
+"loop": false,
+"name": &"apple_expire",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mlbg8"]
+radius = 25.02
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2vcl1"]
+radius = 1.0
+
+[node name="Garden" type="CharacterBody2D"]
+script = ExtResource("1_2vcl1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mnshv")
+animation = &"apple_expire"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mlbg8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2vcl1")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
