@@ -8,9 +8,13 @@ var typing_speed = 0.05
 @onready var animation_player1: AnimationPlayer = $"../../../doggy/AnimationPlayer"
 @onready var ending: Sprite2D = $"../ending"
 @onready var animation_player2: AnimationPlayer = $"../ending/AnimationPlayer"
+@onready var thanks: Label = $"../thanks"
+@onready var button: Button = $"../Button"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	button.hide()
+	thanks.hide()
 	label.hide()
 	dialogue.hide()
 	skip_text.hide()
@@ -46,6 +50,10 @@ func _ready() -> void:
 	skip_text.hide()
 	ending.show()
 	animation_player2.play("ending")
+	await get_tree().create_timer(1).timeout
+	thanks.show()
+	button.show()
+	button.pressed.connect(_play_again)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -68,3 +76,6 @@ func wait_for_input(action_name: String) -> void:
 		await get_tree().process_frame  # Așteaptă un frame
 		if Input.is_action_just_pressed(action_name):
 			break
+			
+func _play_again():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
