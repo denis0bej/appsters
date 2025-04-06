@@ -7,30 +7,30 @@
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_tmqdu"]
 [ext_resource type="Texture2D" uid="uid://if6vf55i7a1h" path="res://Art/Buildings_Colour2.png" id="3_lwl7v"]
 [ext_resource type="Texture2D" uid="uid://bbi8h6akggu6a" path="res://Art/Walls.png" id="3_tmqdu"]
-[ext_resource type="Texture2D" uid="uid://dvrrgljysnh58" path="res://Art/castle_walls.png" id="4_cibu2"]
+[ext_resource type="Texture2D" uid="uid://dorfjgp00tq1n" path="res://Art/castle_walls.png" id="4_cibu2"]
 [ext_resource type="Texture2D" uid="uid://cn7wfmytrihgv" path="res://Art/Roofs.png" id="4_hsw83"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_vn26p"]
 [ext_resource type="Texture2D" uid="uid://bh4tyv3nlkt0i" path="res://Art/wood_gate_intro.png" id="5_0i4px"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="5_4ev5p"]
 [ext_resource type="Script" uid="uid://dew2aybwhiarj" path="res://Scenes/camera_2d.gd" id="6_yf0b0"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="7_hsw83"]
-[ext_resource type="Texture2D" uid="uid://dd6rit8vgvoiw" path="res://Art/castle-entrance.png" id="8_8uog6"]
+[ext_resource type="Texture2D" uid="uid://b112mda7f3kb6" path="res://Art/castle-entrance.png" id="8_8uog6"]
 [ext_resource type="PackedScene" uid="uid://b3ew31x6smx3j" path="res://Scenes/tree.tscn" id="8_yf0b0"]
-[ext_resource type="Texture2D" uid="uid://bvq8eq3xf5i56" path="res://Art/Flowersss.png" id="10_60q8h"]
+[ext_resource type="Texture2D" uid="uid://ccabxdc6kvy25" path="res://Art/Flowersss.png" id="10_60q8h"]
 [ext_resource type="PackedScene" uid="uid://bbrknyd7cbleb" path="res://Scenes/Inventory.tscn" id="13_36r41"]
 [ext_resource type="PackedScene" uid="uid://d23wr4pjlrh68" path="res://Scenes/girl.tscn" id="15_5f43a"]
-[ext_resource type="PackedScene" uid="uid://cje7rpujox6kg" path="res://Scenes/interact_button.tscn" id="16_kq6pr"]
+[ext_resource type="PackedScene" uid="uid://cogx4hrvg17ps" path="res://Scenes/interact_button.tscn" id="16_kq6pr"]
 [ext_resource type="FontFile" uid="uid://rd8qo46nok5b" path="res://Art/ByteBounce.ttf" id="17_txj3b"]
 [ext_resource type="Texture2D" uid="uid://c0oqvvd4k2kkw" path="res://Art/Doggy.png" id="19_oveex"]
-[ext_resource type="Texture2D" uid="uid://c2xhjxqm77wfy" path="res://Art/Prince.png" id="20_cyvso"]
+[ext_resource type="Texture2D" uid="uid://cs0upwer13x2p" path="res://Art/Prince.png" id="20_cyvso"]
 [ext_resource type="Texture2D" uid="uid://fmxmqmajtylp" path="res://Art/knight.png" id="21_nwfgd"]
-[ext_resource type="Texture2D" uid="uid://cwp6sdsb0ctkk" path="res://Art/Spear.png" id="22_nwfgd"]
-[ext_resource type="Texture2D" uid="uid://c2mtauqr8bdt1" path="res://Art/Fade_to_black.png" id="24_jywkh"]
-[ext_resource type="Texture2D" uid="uid://6sqt8bhc8g21" path="res://Art/Artefact_bw.png" id="24_t7qna"]
-[ext_resource type="PackedScene" uid="uid://k3x2gqocp5o7" path="res://garden.tscn" id="26_q8fu0"]
-[ext_resource type="Script" uid="uid://js7klo4cjtm" path="res://Scripts/gate_scene_loader.gd" id="27_xj4o5"]
-[ext_resource type="Texture2D" uid="uid://bhf3nnmlcgvgy" path="res://Art/light_wave.png" id="29_2k8rw"]
-[ext_resource type="AudioStream" uid="uid://b44abki4wmgrk" path="res://Art/Ambient 3.mp3" id="30_4efb2"]
+[ext_resource type="Texture2D" uid="uid://bbwvjsb76ynjr" path="res://Art/Spear.png" id="22_nwfgd"]
+[ext_resource type="Texture2D" uid="uid://fus807cdbpw" path="res://Art/Fade_to_black.png" id="24_jywkh"]
+[ext_resource type="Texture2D" uid="uid://cgddleb8sv1h7" path="res://Art/Artefact_bw.png" id="24_t7qna"]
+[ext_resource type="PackedScene" path="res://garden.tscn" id="26_q8fu0"]
+[ext_resource type="Script" path="res://Scripts/gate_scene_loader.gd" id="27_xj4o5"]
+[ext_resource type="Texture2D" uid="uid://bkxhcrgig1p8b" path="res://Art/light_wave.png" id="29_2k8rw"]
+[ext_resource type="AudioStream" uid="uid://n7fjmylp0ih6" path="res://Art/Ambient 3.mp3" id="30_4efb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om0bm"]
 texture = ExtResource("2_tmqdu")
@@ -2950,7 +2950,7 @@ offset_top = -70.0
 offset_right = 85.0
 offset_bottom = -47.0
 theme_override_fonts/font = ExtResource("17_txj3b")
-text = "Press [LMB] to use artefact
+text = "Press [LMB] to use artifact
 			(rewind time)"
 
 [node name="RMB" type="Label" parent="Camera2D"]
@@ -2961,8 +2961,8 @@ offset_top = -70.0
 offset_right = 85.0
 offset_bottom = -47.0
 theme_override_fonts/font = ExtResource("17_txj3b")
-text = "Press [RMB] to use artefact
-			(rewind time)"
+text = "Press [RMB] to use artifact
+			(forward time)"
 
 [node name="Tree" parent="." instance=ExtResource("8_yf0b0")]
 z_index = 11

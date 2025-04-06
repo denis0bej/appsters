@@ -24,7 +24,7 @@ func _on_body_entered(body: Node2D) -> void:
 		dialogue_text.hide()
 		animation_player1.play("explosion")
 		await get_tree().create_timer(1.6).timeout
-		get_tree().change_scene_to_file("res://scenes/village.tscn")
+		get_tree().change_scene_to_file("res://Scenes/village.tscn")
 		player.speed = 70
 
 

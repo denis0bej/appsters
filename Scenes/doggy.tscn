@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=3 uid="uid://ck5ta15o0at08"]
 
-[ext_resource type="Texture2D" uid="uid://c5xw40nklu7qy" path="res://Art/dog_walk_east.png" id="1_idku3"]
+[ext_resource type="Texture2D" uid="uid://0bq6jeovijbs" path="res://Art/dog_walk_east.png" id="1_idku3"]
 [ext_resource type="Texture2D" uid="uid://c0oqvvd4k2kkw" path="res://Art/Doggy.png" id="1_s3c8e"]
 [ext_resource type="Script" uid="uid://cf5q662rksgn2" path="res://Scripts/doggy.gd" id="1_vvowk"]
-[ext_resource type="Texture2D" uid="uid://dps58n2fa4ni8" path="res://Art/dog_walk_north.png" id="3_vvowk"]
-[ext_resource type="Texture2D" uid="uid://dcypiklicdkkx" path="res://Art/dog_walk_south.png" id="4_fn3qo"]
-[ext_resource type="Texture2D" uid="uid://dql1jx1cuapg7" path="res://Art/dog_walk_west.png" id="5_pfqmh"]
+[ext_resource type="Texture2D" uid="uid://w8u8nium2uud" path="res://Art/dog_walk_north.png" id="3_vvowk"]
+[ext_resource type="Texture2D" uid="uid://fhxyh2uim7l7" path="res://Art/dog_walk_south.png" id="4_fn3qo"]
+[ext_resource type="Texture2D" uid="uid://b1mqqtdhs4usq" path="res://Art/dog_walk_west.png" id="5_pfqmh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i0as8"]
 radius = 5.0
