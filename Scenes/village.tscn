@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://d0lakgrv581lx"]
+[gd_scene load_steps=73 format=4 uid="uid://d0lakgrv581lx"]
 
 [ext_resource type="PackedScene" uid="uid://chpngd4xujipl" path="res://Scenes/old_man.tscn" id="1_hsw83"]
 [ext_resource type="Texture2D" uid="uid://c4ma4nru11e2b" path="res://Art/ground.png" id="1_ofn1o"]
@@ -7,27 +7,29 @@
 [ext_resource type="Texture2D" uid="uid://wnp4m6uceae8" path="res://Art/Sprite-0011.png" id="2_tmqdu"]
 [ext_resource type="Texture2D" uid="uid://if6vf55i7a1h" path="res://Art/Buildings_Colour2.png" id="3_lwl7v"]
 [ext_resource type="Texture2D" uid="uid://bbi8h6akggu6a" path="res://Art/Walls.png" id="3_tmqdu"]
-[ext_resource type="Texture2D" uid="uid://dvrrgljysnh58" path="res://Art/castle_walls.png" id="4_cibu2"]
+[ext_resource type="Texture2D" uid="uid://cs7d6x3rgph6" path="res://Art/castle_walls.png" id="4_cibu2"]
 [ext_resource type="Texture2D" uid="uid://cn7wfmytrihgv" path="res://Art/Roofs.png" id="4_hsw83"]
 [ext_resource type="Texture2D" uid="uid://uw4143hwkgxk" path="res://Art/ExteriorGate.png" id="4_vn26p"]
 [ext_resource type="Texture2D" uid="uid://bh4tyv3nlkt0i" path="res://Art/wood_gate_intro.png" id="5_0i4px"]
 [ext_resource type="PackedScene" uid="uid://dmje8lwyh062k" path="res://Scenes/player.tscn" id="5_4ev5p"]
 [ext_resource type="Script" uid="uid://dew2aybwhiarj" path="res://Scenes/camera_2d.gd" id="6_yf0b0"]
 [ext_resource type="PackedScene" uid="uid://cycs08lnap2qv" path="res://Scenes/dialogue.tscn" id="7_hsw83"]
-[ext_resource type="Texture2D" uid="uid://dd6rit8vgvoiw" path="res://Art/castle-entrance.png" id="8_8uog6"]
-[ext_resource type="PackedScene" uid="uid://b3ew31x6smx3j" path="res://Scenes/tree.tscn" id="8_yf0b0"]
-[ext_resource type="Texture2D" uid="uid://bvq8eq3xf5i56" path="res://Art/Flowersss.png" id="10_60q8h"]
-[ext_resource type="PackedScene" uid="uid://bbrknyd7cbleb" path="res://Scenes/Inventory.tscn" id="13_36r41"]
-[ext_resource type="PackedScene" uid="uid://d23wr4pjlrh68" path="res://Scenes/girl.tscn" id="15_5f43a"]
-[ext_resource type="PackedScene" path="res://Scenes/interact_button.tscn" id="16_kq6pr"]
+[ext_resource type="Texture2D" uid="uid://euhojighbix3" path="res://Art/castle-entrance.png" id="8_8uog6"]
+[ext_resource type="PackedScene" path="res://Scenes/tree.tscn" id="8_yf0b0"]
+[ext_resource type="Texture2D" uid="uid://nr7gpgcyyd1l" path="res://Art/Flowersss.png" id="10_60q8h"]
+[ext_resource type="PackedScene" uid="uid://b68cerr67vmdd" path="res://Scenes/Inventory.tscn" id="13_36r41"]
+[ext_resource type="PackedScene" path="res://Scenes/girl.tscn" id="15_5f43a"]
+[ext_resource type="PackedScene" uid="uid://cogx4hrvg17ps" path="res://Scenes/interact_button.tscn" id="16_kq6pr"]
 [ext_resource type="Texture2D" uid="uid://c0oqvvd4k2kkw" path="res://Art/Doggy.png" id="19_oveex"]
-[ext_resource type="Texture2D" uid="uid://c2xhjxqm77wfy" path="res://Art/Prince.png" id="20_cyvso"]
+[ext_resource type="Texture2D" uid="uid://ckoh70tga7nta" path="res://Art/Prince.png" id="20_cyvso"]
 [ext_resource type="Texture2D" uid="uid://fmxmqmajtylp" path="res://Art/knight.png" id="21_nwfgd"]
-[ext_resource type="Texture2D" uid="uid://cwp6sdsb0ctkk" path="res://Art/Spear.png" id="22_nwfgd"]
-[ext_resource type="Texture2D" uid="uid://c2mtauqr8bdt1" path="res://Art/Fade_to_black.png" id="24_jywkh"]
-[ext_resource type="Texture2D" uid="uid://6sqt8bhc8g21" path="res://Art/Artefact_bw.png" id="24_t7qna"]
-[ext_resource type="PackedScene" uid="uid://k3x2gqocp5o7" path="res://garden.tscn" id="26_q8fu0"]
-[ext_resource type="Script" uid="uid://js7klo4cjtm" path="res://Scripts/gate_scene_loader.gd" id="27_xj4o5"]
+[ext_resource type="Texture2D" uid="uid://02gu6chnrqdp" path="res://Art/Spear.png" id="22_nwfgd"]
+[ext_resource type="Texture2D" uid="uid://dfdxl47p3bpye" path="res://Art/Fade_to_black.png" id="24_jywkh"]
+[ext_resource type="Texture2D" uid="uid://d3iins4djdv62" path="res://Art/Artefact_bw.png" id="24_t7qna"]
+[ext_resource type="PackedScene" path="res://garden.tscn" id="26_q8fu0"]
+[ext_resource type="Script" path="res://Scripts/gate_scene_loader.gd" id="27_xj4o5"]
+[ext_resource type="Texture2D" uid="uid://cgg2mfdaobcso" path="res://Art/light_wave.png" id="29_2k8rw"]
+[ext_resource type="AudioStream" uid="uid://cswro7a775mn1" path="res://Art/Ambient 3.mp3" id="30_4efb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om0bm"]
 texture = ExtResource("2_tmqdu")
@@ -2737,6 +2739,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_xj4o5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/Knight:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(31, -428)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer/Knight2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -428)]
+}
+
 [sub_resource type="Animation" id="Animation_60q8h"]
 resource_name = "garden_reward"
 length = 12.0
@@ -2765,37 +2794,47 @@ tracks/1/keys = {
 "values": [Vector2(2, -428), Vector2(-3, -408), Vector2(-57, -403), Vector2(-57, -403), Vector2(-56, -361), Vector2(-107, -385)]
 }
 
-[sub_resource type="Animation" id="Animation_xj4o5"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2k8rw"]
+_data = {
+&"RESET": SubResource("Animation_xj4o5"),
+&"garden_reward": SubResource("Animation_60q8h")
+}
+
+[sub_resource type="Animation" id="Animation_fofty"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimationPlayer/Knight:position")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(31, -428)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimationPlayer/Knight2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2, -428)]
+"values": [Vector2(1.42, 1.42)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_2k8rw"]
+[sub_resource type="Animation" id="Animation_l8wht"]
+resource_name = "explosion"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.23333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4.395, 4.395), Vector2(0.005, 0.005)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qanee"]
 _data = {
-&"RESET": SubResource("Animation_xj4o5"),
-&"garden_reward": SubResource("Animation_60q8h")
+&"RESET": SubResource("Animation_fofty"),
+&"explosion": SubResource("Animation_l8wht")
 }
 
 [node name="Village" type="Node2D"]
@@ -3029,6 +3068,22 @@ root_node = NodePath("../AnimatedSprite2D4")
 libraries = {
 &"": SubResource("AnimationLibrary_2k8rw")
 }
+
+[node name="Teleportation_" type="Sprite2D" parent="."]
+z_index = 100
+position = Vector2(-127, -361)
+scale = Vector2(1.42, 1.42)
+texture = ExtResource("29_2k8rw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Teleportation_"]
+libraries = {
+&"": SubResource("AnimationLibrary_qanee")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_4efb2")
+volume_db = -11.86
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
 [connection signal="animation_started" from="AnimationPlayer" to="Player" method="_on_animation_player_animation_started"]

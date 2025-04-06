@@ -1,4 +1,5 @@
 extends Node2D
+@onready var animation_player: AnimationPlayer = $Teleportation_/AnimationPlayer
 
 var fade := false
 var fading_out := false  # true = fading to black, false = fading back in
@@ -10,7 +11,8 @@ func _ready() -> void:
 	$AnimationPlayer/Knight2.z_index = 0
 	$FadeToBlack.modulate.a = 0.0  # Start transparent
 	$FadeToBlack.z_index = 999  # Make sure it's in front
-
+	animation_player.play("explosion")
+	await get_tree().create_timer(1).timeout
 	$AnimationPlayer.play("prince_greeting")
 	await get_tree().create_timer(0.5).timeout
 	$"Camera2D/Dialogue".show_dialogue("Mommy is so annoyingg!! Arghh..")
