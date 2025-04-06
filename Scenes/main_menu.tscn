@@ -111,14 +111,31 @@ text = "Quit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 78.0
-offset_top = -10.0
-offset_right = 259.0
-offset_bottom = 63.0
-theme_override_colors/font_color = Color(0.847838, 0.938479, 0.940139, 1)
+offset_left = 52.0
+offset_top = -20.0
+offset_right = 235.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.909374, 0.384024, 0.334117, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_font_sizes/font_size = 25
-text = "GAME NAME"
+text = "Timeless"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 13.0
+offset_right = 229.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.3412, 0.467887, 0.980158, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 25
+text = "Companion"
 horizontal_alignment = 1
 vertical_alignment = 1
 
