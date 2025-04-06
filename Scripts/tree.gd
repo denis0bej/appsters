@@ -168,3 +168,41 @@ func _on_timer_timeout() -> void:
 		$Tree_bw_anim.visible = false
 		art_cooldown = false
 		real_apples = true
+
+
+
+func _on_apple_area_1_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+
+func _on_apple_area_2_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+
+func _on_apple_area_3_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+
+func _on_apple_area_4_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_5_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_6_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_7_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_8_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_9_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_10_body_exited(body: Node2D) -> void:
+	apple_pickup = false
+
+func _on_apple_area_11_body_exited(body: Node2D) -> void:
+	apple_pickup = false
