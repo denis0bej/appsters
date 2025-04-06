@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://dajfwppia5o2l" path="res://Scenes/animation_player.gd" id="10_mh01j"]
 [ext_resource type="Texture2D" uid="uid://d0qhdxqqd0o71" path="res://Art/Player_sprites.png" id="11_xtbb3"]
 [ext_resource type="Script" uid="uid://dkol8lbrvxpy0" path="res://Scenes/player_animation.gd" id="12_m7auy"]
-[ext_resource type="PackedScene" uid="uid://b5lc4afy6gtvb" path="res://Scenes/knight.tscn" id="14_5jb5p"]
+[ext_resource type="PackedScene" uid="uid://cmrjpp510iwrb" path="res://Scenes/knight.tscn" id="14_5jb5p"]
 [ext_resource type="Script" uid="uid://bhul3ghsghxlu" path="res://Scripts/chained_doggy.gd" id="15_a3ny1"]
 [ext_resource type="Texture2D" uid="uid://cwsnbewaaifgh" path="res://Art/Doggy_chain.png" id="15_vo3gu"]
 [ext_resource type="PackedScene" uid="uid://dokc6u0ukiaqy" path="res://Scenes/pillar.tscn" id="17_wdhbe"]
@@ -3588,7 +3588,7 @@ animation = &"Run_North"
 offset = Vector2(-1, -1)
 script = ExtResource("12_m7auy")
 
-[node name="knight2" parent="." instance=ExtResource("14_5jb5p")]
+[node name="fnight2" parent="." instance=ExtResource("14_5jb5p")]
 position = Vector2(-23, -34)
 
 [node name="Chained_doggy" type="CharacterBody2D" parent="."]
@@ -3635,7 +3635,6 @@ script = ExtResource("18_lp74d")
 [node name="knight3" parent="Path2D/PathFollow2D" instance=ExtResource("14_5jb5p")]
 y_sort_enabled = true
 rotation = -2.85354
-scale = Vector2(1, 1)
 
 [node name="Path2D2" type="Path2D" parent="."]
 y_sort_enabled = true
