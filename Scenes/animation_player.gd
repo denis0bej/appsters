@@ -2,6 +2,13 @@ extends AnimationPlayer
 @onready var root = get_parent()
 @onready var player = root.get_node("Player")
 @onready var player_anim = root.get_node("PlayerAnimation")
+
+@onready var dialogue_2: TextureRect = $"../Camera2D/Dialogue2"
+@onready var dialogue_text: Label = $"../Camera2D/Dialogue_text"
+@onready var skip_text: Label = $"../Camera2D/SkipText"
+
+
+
 func _ready() -> void:
 	player.visible = false
 	play("Initial Scene")

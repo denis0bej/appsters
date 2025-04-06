@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (isTriggered) && body.name.contains("Player"):
 		isTriggered = false
-		player.speed = 0
+		player.still = true
 		falling_artefact.play()
 		await get_tree().create_timer(4).timeout
 		explosion_animation.play("explosion")
@@ -40,7 +40,7 @@ func _on_timer_timeout() -> void:
 	skip_text.text = "Press [E] to skip"
 	await start_typing("Wh...Wh..What happend?")
 	await wait_for_input("Interact")
-	player.speed = 70
+	player.still = false
 	skip_text.hide()
 	dialogue.hide()
 	dialogue_text.hide()
