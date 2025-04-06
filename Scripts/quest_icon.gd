@@ -53,6 +53,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		isTriggered = false
 		current_quest = "Quest completed!"
 		await start_typing(current_quest)
+		await get_tree().create_timer(2.0).timeout
 		current_quest = "Follow the dog"
 		start_typing(current_quest)
 	
