@@ -68,7 +68,10 @@ git clone https://github.com/denis0bej/appsters.git
 - Select the destination and click **"Save"**
 
 ## Screenshots
-[Add screenshots of your game in action]
+![Game Screenshot](Screenshots/1.png)
+![Game Screenshot](Screenshots/2.png)
+![Game Screenshot](Screenshots/3.png)
+![Game Screenshot](Screenshots/4.png)
 
 ## What We Learned
 - **Team Collaboration:** Effective division of tasks and communication in a time crunch
