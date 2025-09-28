@@ -68,6 +68,7 @@ git clone https://github.com/denis0bej/appsters.git
 - Select the destination and click **"Save"**
 
 ## Screenshots
+
 ![Game Screenshot](Screenshots/1.png)
 ![Game Screenshot](Screenshots/2.png)
 ![Game Screenshot](Screenshots/3.png)
