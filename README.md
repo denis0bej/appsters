@@ -72,6 +72,7 @@ git clone https://github.com/denis0bej/appsters.git
 ![Game Screenshot](Screenshots/2.png)
 ![Game Screenshot](Screenshots/3.png)
 ![Game Screenshot](Screenshots/4.png)
+![Game Screenshot](Screenshots/5.png)
 
 ## What We Learned
 - **Team Collaboration:** Effective division of tasks and communication in a time crunch
